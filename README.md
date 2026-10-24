@@ -1,9 +1,9 @@
 # Below Zero
 
-Negative electricity prices in Great Britain are at least three different things: a negative
-wholesale price, a negative imbalance price, and negative accepted bids in the Balancing
-Mechanism (paid curtailment). This project separates them, measures how often each happens,
-and tests whether they move together.
+How much does Great Britain pay each month to switch off renewable generation its network can't
+carry, what does replacing that energy cost, and how much of it could planned transmission
+investment remove? Every cost is built bottom-up from half-hourly Elexon settlement data, then
+reconciled against NESO's published constraint costs.
 
 Work in progress. See `CLAUDE.md` for the research question and plan.
 
@@ -26,7 +26,7 @@ Elexon Insights API (`https://data.elexon.co.uk/bmrs/api/v1`), public, no key re
 
 | Dataset | Used for | Notes |
 |---|---|---|
-| `MID` (Market Index Data) | Wholesale price | Two providers are published. `N2EXMIDP` shows price 0 at volume 0 in every period checked, so only `APXMIDP` is used. The parser warns if N2EX ever carries volume. |
+| `MID` (Market Index Data) | Wholesale price context | Volume-weighted average price of exchange trades for delivery in each half hour. When volume misses Elexon's liquidity threshold, price and volume default to zero, so zero-volume rows are treated as missing. `N2EXMIDP` is all zeros, so only `APXMIDP` is used. |
 
 ## Conventions
 

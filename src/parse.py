@@ -12,7 +12,7 @@ LONDON = "Europe/London"
 HALF_HOUR = pd.Timedelta(minutes=30)
 
 # MID is published by two providers. In every period checked so far N2EXMIDP shows
-# price 0 at volume 0, i.e. no data, so we use APX only. parse_mid() re-checks this
+# price 0 at volume 0, i.e. no index (see below), so we use APX only. parse_mid() re-checks this
 # on every file and warns if N2EX ever carries real volume.
 MID_PROVIDER = "APXMIDP"
 
@@ -60,6 +60,13 @@ def parse_mid(path: Path) -> pd.DataFrame:
         expected = list(range(1, periods_in_day(date) + 1))
         if sorted(group["settlementPeriod"]) != expected:
             raise ValueError(f"{path.name}: {date} does not have exactly periods 1..{expected[-1]}")
+
+    # Below Elexon's liquidity threshold, price and volume both default to zero.
+    # That means "no index", not "the price was £0", so record it as missing.
+    no_index = df["volume"] == 0
+    if no_index.any():
+        print(f"{path.name}: {no_index.sum()} periods below liquidity threshold, price set to missing")
+    df["price"] = df["price"].mask(no_index)
 
     tidy = pd.DataFrame({
         "settlement_date": df["settlementDate"],
