@@ -14,7 +14,7 @@ py -3.14 -m venv .venv
 .venv\Scripts\activate
 pip install -r requirements.txt
 
-python src/fetch.py 2024-04-07      # download one settlement day into data/raw/ (skips if cached)
+python src/fetch.py 2024-04-07 --period 23   # one settlement day into data/raw/ (skips what's cached)
 ```
 
 Then open `notebooks/analysis.ipynb`. The notebook reads only from `data/raw/` and never calls
@@ -27,6 +27,11 @@ Elexon Insights API (`https://data.elexon.co.uk/bmrs/api/v1`), public, no key re
 | Dataset | Used for | Notes |
 |---|---|---|
 | `MID` (Market Index Data) | Wholesale price context | Volume-weighted average price of exchange trades for delivery in each half hour. When volume misses Elexon's liquidity threshold, price and volume default to zero, so zero-volume rows are treated as missing. `N2EXMIDP` is all zeros, so only `APXMIDP` is used. |
+
+| `EBOCF` (indicative cashflows) | Cash paid to or by each BM unit, per half hour | Positive = paid to the unit. Checked by hand: settled volume × accepted price reproduces it exactly. |
+| `BOAV` (acceptance volumes) | Settled MWh of each accepted action | Used rather than `DISPTAV`, whose volume versions are built for imbalance pricing and don't match the cash. |
+| `BOALF` (acceptances) | Whether each action was flagged as a system action (`soFlag`) | Joined to `BOAV` on acceptance number. |
+| BM unit register | Fuel type per unit | Provisional until the committed mapping (`data/bmunit_map.csv`) is built. |
 
 ## Conventions
 

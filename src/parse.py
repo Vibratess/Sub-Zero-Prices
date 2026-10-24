@@ -12,9 +12,18 @@ LONDON = "Europe/London"
 HALF_HOUR = pd.Timedelta(minutes=30)
 
 # MID is published by two providers. In every period checked so far N2EXMIDP shows
-# price 0 at volume 0, i.e. no index (see below), so we use APX only. parse_mid() re-checks this
-# on every file and warns if N2EX ever carries real volume.
+# price 0 at volume 0, i.e. no index (see below), so we use APX only. parse_mid()
+# re-checks this on every file and warns if N2EX ever carries real volume.
 MID_PROVIDER = "APXMIDP"
+
+
+# --- Shared helpers ----------------------------------------------------------------------
+
+def load_records(path: Path) -> pd.DataFrame:
+    """Read a cached JSON response. Most endpoints wrap their records in a "data" key."""
+    with open(path, encoding="utf-8") as f:
+        raw = json.load(f)
+    return pd.DataFrame(raw["data"] if isinstance(raw, dict) else raw)
 
 
 def settlement_period_start(settlement_date: pd.Series, settlement_period: pd.Series) -> pd.Series:
@@ -36,24 +45,28 @@ def periods_in_day(settlement_date: str) -> int:
     return int((end - start) / HALF_HOUR)
 
 
+def checked_start_utc(df: pd.DataFrame, path: Path) -> pd.Series:
+    """Build start times from (settlementDate, settlementPeriod) and confirm they match
+    the startTime the API reports, so a timestamp error can never pass silently."""
+    start_utc = settlement_period_start(df["settlementDate"], df["settlementPeriod"])
+    api_start = pd.to_datetime(df["startTime"], utc=True)
+    if not (api_start == start_utc).all():
+        raise ValueError(f"{path.name}: computed start times disagree with the API's startTime")
+    return start_utc
+
+
+# --- Market Index Data: wholesale price -------------------------------------------------
+
 def parse_mid(path: Path) -> pd.DataFrame:
     """Read one cached MID file and return one row per settlement period (APX only)."""
-    with open(path, encoding="utf-8") as f:
-        raw = json.load(f)
-    df = pd.DataFrame(raw["data"])
+    df = load_records(path)
 
     # Check the single-provider decision still holds for this file.
     other = df[(df["dataProvider"] != MID_PROVIDER) & (df["volume"] > 0)]
     if not other.empty:
         print(f"WARNING {path.name}: {len(other)} non-APX rows have positive volume")
     df = df[df["dataProvider"] == MID_PROVIDER].copy()
-
-    # Build the timestamp from (settlementDate, settlementPeriod) ourselves, then
-    # confirm it agrees with the startTime the API reports.
-    df["start_utc"] = settlement_period_start(df["settlementDate"], df["settlementPeriod"])
-    api_start = pd.to_datetime(df["startTime"], utc=True)
-    if not (api_start == df["start_utc"]).all():
-        raise ValueError(f"{path.name}: computed start times disagree with the API's startTime")
+    df["start_utc"] = checked_start_utc(df, path)
 
     # Exactly one row for each period 1..N, where N depends on clock changes.
     for date, group in df.groupby("settlementDate"):
@@ -77,3 +90,78 @@ def parse_mid(path: Path) -> pd.DataFrame:
         "volume_mwh": df["volume"],
     })
     return tidy.sort_values("start_utc").reset_index(drop=True)
+
+
+# --- Balancing Mechanism -----------------------------------------------------------------
+
+def parse_cashflows(path: Path) -> pd.DataFrame:
+    """One row per BM unit per period: the indicative cashflow (EBOCF), in £.
+
+    Sign convention, verified by hand in the notebook: positive = paid TO the unit.
+    A wind farm turned down (negative volume) at a negative bid price is paid.
+    """
+    df = load_records(path)
+    tidy = pd.DataFrame({
+        "settlement_date": df["settlementDate"],
+        "settlement_period": df["settlementPeriod"],
+        "start_utc": checked_start_utc(df, path),
+        "bm_unit": df["bmUnit"],
+        "cashflow_gbp": df["totalCashflow"],
+    })
+    if tidy.duplicated(["bm_unit", "settlement_period"]).any():
+        raise ValueError(f"{path.name}: more than one row for a unit and period")
+    return tidy
+
+
+def parse_boav(path: Path) -> pd.DataFrame:
+    """One row per acceptance per unit per period: the settled volume (BOAV), in MWh.
+
+    Negative = output reduced (bids), positive = output increased (offers).
+    """
+    df = load_records(path)
+    return pd.DataFrame({
+        "settlement_date": df["settlementDate"],
+        "settlement_period": df["settlementPeriod"],
+        "start_utc": checked_start_utc(df, path),
+        "bm_unit": df["bmUnit"],
+        "acceptance_number": df["acceptanceId"],
+        "volume_mwh": df["totalVolumeAccepted"],
+    })
+
+
+def parse_boalf(path: Path) -> pd.DataFrame:
+    """One row per acceptance, with its system-action flag (soFlag).
+
+    A raw acceptance has several rows (points on its output profile); the flag is
+    the same on all of them, which is checked here.
+    """
+    df = load_records(path)
+    flags = df.groupby(["bmUnit", "acceptanceNumber"])["soFlag"].agg(["first", "nunique"])
+    if (flags["nunique"] > 1).any():
+        raise ValueError(f"{path.name}: an acceptance has conflicting soFlag values")
+    return pd.DataFrame({
+        "bm_unit": flags.index.get_level_values("bmUnit"),
+        "acceptance_number": flags.index.get_level_values("acceptanceNumber"),
+        "so_flag": flags["first"].to_numpy(),
+    })
+
+
+def parse_bmunits(path: Path) -> pd.DataFrame:
+    """The BM unit register, keeping the columns the mapping needs."""
+    df = load_records(path)
+    df = df[df["elexonBmUnit"].notna()]
+    tidy = pd.DataFrame({
+        "bm_unit": df["elexonBmUnit"],
+        "ng_bm_unit": df["nationalGridBmUnit"],
+        "name": df["bmUnitName"],
+        "fuel_type": df["fuelType"],
+        "gsp_group": df["gspGroupName"],
+        "lead_party": df["leadPartyName"],
+        "generation_capacity_mw": pd.to_numeric(df["generationCapacity"], errors="coerce"),
+    })
+    # The register lists at least one unit twice (T_WLNYO-4). Drop exact copies, and
+    # fail if a unit appears twice with different details, since joins would double-count.
+    tidy = tidy.drop_duplicates()
+    if tidy["bm_unit"].duplicated().any():
+        raise ValueError(f"{path.name}: a BM unit appears twice with different details")
+    return tidy.reset_index(drop=True)

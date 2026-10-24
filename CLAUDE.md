@@ -51,9 +51,11 @@ Charts must be readable in both light and dark, and legible when printed greysca
 | Endpoint | Contents | Role | Status |
 |---|---|---|---|
 | `datasets/MID` | Market Index Data (exchange price, volume) | Wholesale price context | ✅ Verified (Stage 01) |
-| `balancing/settlement/indicative/cashflows/all/{bid\|offer}/{date}/{period}` | Cashflow per BM unit per period | Charts 1 and 3 — primary cost source | ✅ Responds; sign convention **not yet verified** |
-| `balancing/settlement/indicative/volumes/all/...` | Accepted volume per BM unit per period | Charts 1–3 — curtailed MWh | ⚠️ Not yet tested |
-| `datasets/BOALF` | Bid-offer acceptances, with `soFlag` | Which actions were system (constraint) actions | ✅ Responds |
+| `balancing/settlement/indicative/cashflows/all/{bid\|offer}/{date}` (`EBOCF`) | Cash per BM unit per period | Charts 1 and 3 — the money | ✅ Verified (Stage 02): positive = paid **to** the unit |
+| `balancing/settlement/acceptance/volumes/all/{bid\|offer}/{date}` (`BOAV`) | Settled volume per acceptance per unit per period | Charts 1–3 — curtailed MWh | ✅ Verified (Stage 02): volume × price rebuilds every `EBOCF` cashflow checked. **Quota-limited** |
+| `datasets/BOALF` (settlement-date filter) | Acceptances, with `soFlag` | System vs energy actions; joins to `BOAV` on acceptance number | ✅ Verified: 99.9% of accepted volume links |
+| `balancing/settlement/acceptances/all/{date}/{period}` | Accepted bid/offer prices per acceptance | Hand-checking only (per period) | ✅ Verified |
+| `balancing/settlement/indicative/volumes/...` (`DISPTAV`) | Volumes for the imbalance price calculation | **Not used.** Its four versions (Original, Tagged, …) don't reproduce cashflows | ❌ Rejected |
 | `datasets/BOD` | Submitted bid/offer prices | Cross-check only | ✅ Responds — ~6,000 rows per period; **do not bulk-download** |
 | `reference/bmunits/all` | BM unit reference (~3,100 units) | Unit → fuel type / location mapping | ✅ Responds |
 | `datasets/FUELHH`, `INDO` | Generation by fuel, demand | Context (wind share at times of curtailment) | ⚠️ Not yet tested |
@@ -112,7 +114,11 @@ Notebooks lie about execution order; the multi-year pull must never live in a re
 - **Not every accepted wind bid is a constraint action.** Some are energy balancing. Use `soFlag` and NESO's own constraint categorisation; document the rule and how much it moves the total.
 - **Not all constraint cost goes through the BM.** Trades, intertrip contracts (CMIS) and other constraint-management contracts sit outside it, so a BM-only total will sit below NESO's figure. Expected — quantify it, don't hide it.
 - **Indicative ≠ final settlement.** The indicative cashflows are calculated shortly after the day; final settlement can differ. State which was used.
-- **Cashflow sign conventions.** Verify on a hand-checked unit and period, using BOD prices × accepted volume, before trusting any total.
+- **Cashflow sign convention (verified Stage 02).** Positive `EBOCF` = paid to the unit. A wind farm turned down (negative volume) at a negative bid price is paid; a gas plant turned down at a positive bid price pays back.
+- **`DISPTAV` is not settlement volume.** Its "Original" version misses volumes that were paid for. Use `BOAV`.
+- **`soFlag` is per acceptance, cash is per unit-period.** Cash is shared across a unit's acceptances pro rata to volume; exact unless flags are mixed (£22k of £2.82m on 7 April 2024). Report the pro-rated amount.
+- **Cache size and quota.** One day of `MID` + `EBOCF` + `BOAV` + `BOALF` is ~15 MB of JSON, so three years is ~16 GB, and `BOAV` is quota-limited. Decide the storage and pacing plan before the Stage 04 loop.
+- **The BM unit register lists a unit twice** (`T_WLNYO-4`). `parse_bmunits` drops exact copies and fails on conflicting ones.
 - **Replacement attribution is an estimate.** The data does not say which offer replaced which bid. Chart 3's method must be stated plainly and kept simple.
 - **Chart 2 is a ceiling.** Extra boundary capacity doesn't remove every constraint (local constraints, outages, other boundaries). Never present it as a forecast saving.
 - **`MID` zero rows mean "no index".** When traded volume misses Elexon's liquidity threshold, price and volume both default to zero. Treat zero-volume rows as missing, not as £0. `N2EXMIDP` is all zeros; use `APXMIDP`.
@@ -126,7 +132,7 @@ Notebooks lie about execution order; the multi-year pull must never live in a re
 Each stage produces something publishable on its own, so the project survives being abandoned halfway.
 
 - **01 — One day of prices, end to end.** ✅ Done. `MID` for 7 April 2024: fetch, cache, parse, plot.
-- **02 — One day of balancing cost, end to end.** Same day. Pull indicative bid/offer cashflows and volumes plus `BOALF`; verify the sign convention by hand on one unit; total what was paid to wind to turn down. No loops.
+- **02 — One day of balancing cost, end to end.** ✅ Done. 7 April 2024: £2.82m paid to wind to cut 52,315 MWh; 160 of 160 cashflows in period 23 rebuilt by hand. Paid curtailment peaked in the evening, not when prices were most negative.
 - **03 — BM unit mapping.** Build `data/bmunit_map.csv`: fuel type, Scotland vs England & Wales, boundary. Document every judgement call.
 - **04 — Three years, cached; charts 1 and 3.** Loop over the study period, cache everything, parse from disk. Monthly curtailment cost and full replacement cost. Reconcile against NESO constraint breakdown.
 - **05 — Boundaries; chart 2.** NESO boundary costs, limits and planned capacity. Compute the upper bound on what reinforcement could remove.
