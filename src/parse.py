@@ -12,9 +12,9 @@ import pandas as pd
 LONDON = "Europe/London"
 HALF_HOUR = pd.Timedelta(minutes=30)
 
-# MID is published by two providers. In every period checked so far N2EXMIDP shows
-# price 0 at volume 0, i.e. no index (see below), so we use APX only. parse_mid()
-# re-checks this on every file and warns if N2EX ever carries real volume.
+# MID is published by two providers. N2EXMIDP almost always shows price 0 at volume 0,
+# i.e. no index (see below): over April 2023 - March 2026 it carried 0.01% of traded
+# volume, on 49 days. So we use APX only. parse_mid() warns on days N2EX has volume.
 MID_PROVIDER = "APXMIDP"
 
 
@@ -74,11 +74,18 @@ def parse_mid(path: Path) -> pd.DataFrame:
     df = df[df["dataProvider"] == MID_PROVIDER].copy()
     df["start_utc"] = checked_start_utc(df, path)
 
-    # Exactly one row for each period 1..N, where N depends on clock changes.
-    for date, group in df.groupby("settlementDate"):
-        expected = list(range(1, periods_in_day(date) + 1))
-        if sorted(group["settlementPeriod"]) != expected:
-            raise ValueError(f"{path.name}: {date} does not have exactly periods 1..{expected[-1]}")
+    # At most one row per period, all within 1..N (N depends on clock changes). A period
+    # Elexon did not publish (6 in three years) is added back with a missing price, so
+    # every day has its full set of rows; a duplicate or impossible period is an error.
+    date = df["settlementDate"].iloc[0]
+    n_periods = periods_in_day(date)
+    if df["settlementPeriod"].duplicated().any() or not df["settlementPeriod"].between(1, n_periods).all():
+        raise ValueError(f"{path.name}: duplicate or out-of-range settlement periods")
+    full = pd.DataFrame({"settlementDate": date, "settlementPeriod": range(1, n_periods + 1)})
+    full["start_utc"] = settlement_period_start(full["settlementDate"], full["settlementPeriod"])
+    df = full.merge(df, on=["settlementDate", "settlementPeriod", "start_utc"], how="left")
+    if df["price"].isna().any():
+        print(f"{path.name}: {df['price'].isna().sum()} periods not published, price set to missing")
 
     # Below Elexon's liquidity threshold, price and volume both default to zero.
     # That means "no index", not "the price was £0", so record it as missing.
@@ -107,16 +114,22 @@ def parse_cashflows(path: Path) -> pd.DataFrame:
     A wind farm turned down (negative volume) at a negative bid price is paid.
     """
     df = load_records(path)
-    tidy = pd.DataFrame({
+
+    # The API should return only the latest calculation run, but on one day in three
+    # years (16 Oct 2023, periods 37-39) it returned two. Keep the latest run.
+    df = df.sort_values("createdDateTime")
+    repeats = df.duplicated(["bmUnit", "settlementPeriod"], keep="last")
+    if repeats.any():
+        print(f"{path.name}: {repeats.sum()} rows from an earlier calculation run dropped")
+        df = df[~repeats]
+
+    return pd.DataFrame({
         "settlement_date": df["settlementDate"],
         "settlement_period": df["settlementPeriod"],
         "start_utc": checked_start_utc(df, path),
         "bm_unit": df["bmUnit"],
         "cashflow_gbp": df["totalCashflow"],
     })
-    if tidy.duplicated(["bm_unit", "settlement_period"]).any():
-        raise ValueError(f"{path.name}: more than one row for a unit and period")
-    return tidy
 
 
 def parse_boav(path: Path) -> pd.DataFrame:
