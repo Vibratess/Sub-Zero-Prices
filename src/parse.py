@@ -135,16 +135,18 @@ def parse_boav(path: Path) -> pd.DataFrame:
     })
 
 
-def parse_boalf(path: Path) -> pd.DataFrame:
+def parse_boalf(paths: Path | list[Path]) -> pd.DataFrame:
     """One row per acceptance, with its system-action flag (soFlag).
 
-    A raw acceptance has several rows (points on its output profile); the flag is
-    the same on all of them, which is checked here.
+    Takes one file, or a list (the autumn clock-change day is cached in two parts).
+    A raw acceptance has several rows (points on its output profile), and can appear in
+    both parts; the flag must be the same on all of them, which is checked here.
     """
-    df = load_records(path)
+    paths = [paths] if isinstance(paths, Path) else paths
+    df = pd.concat([load_records(p) for p in paths], ignore_index=True)
     flags = df.groupby(["bmUnit", "acceptanceNumber"])["soFlag"].agg(["first", "nunique"])
     if (flags["nunique"] > 1).any():
-        raise ValueError(f"{path.name}: an acceptance has conflicting soFlag values")
+        raise ValueError(f"{paths[0].name}: an acceptance has conflicting soFlag values")
     return pd.DataFrame({
         "bm_unit": flags.index.get_level_values("bmUnit"),
         "acceptance_number": flags.index.get_level_values("acceptanceNumber"),
