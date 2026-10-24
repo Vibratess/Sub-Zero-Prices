@@ -14,16 +14,17 @@ from pathlib import Path
 import requests
 
 BASE_URL = "https://data.elexon.co.uk/bmrs/api/v1"
+NESO_URL = "https://api.neso.energy"
 RAW_DIR = Path(__file__).resolve().parent.parent / "data" / "raw"
 
 
-def download_to_cache(endpoint: str, params: dict, path: Path) -> Path:
+def download_to_cache(endpoint: str, params: dict, path: Path, base: str = BASE_URL) -> Path:
     """GET one endpoint and save the response bytes to `path`, unless already cached."""
     if path.exists():
         print(f"Already cached, not re-requesting: {path.name}")
         return path
 
-    response = requests.get(f"{BASE_URL}/{endpoint}", params=params, timeout=120)
+    response = requests.get(f"{base}/{endpoint}", params=params, timeout=120)
     response.raise_for_status()
 
     # Save the bytes exactly as received, gzip-compressed (JSON shrinks ~10x, and
@@ -122,6 +123,20 @@ def fetch_bmunits() -> Path:
     return download_to_cache("reference/bmunits/all", {}, bmunits_cache_path())
 
 
+# NESO data portal resources, by CKAN resource id
+TEC_REGISTER_ID = "17becbab-e3e8-473f-b303-3806f43a6a10"
+
+
+def tec_register_cache_path() -> Path:
+    return RAW_DIR / "neso" / "tec_register.csv.gz"
+
+
+def fetch_tec_register() -> Path:
+    """NESO's Transmission Entry Capacity register: every transmission-connected project,
+    with its connection site and host transmission owner. A current snapshot, not history."""
+    return download_to_cache(f"datastore/dump/{TEC_REGISTER_ID}", {}, tec_register_cache_path(), base=NESO_URL)
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Cache one settlement day of Elexon data.")
     parser.add_argument("settlement_date", help="settlement date, YYYY-MM-DD")
@@ -134,5 +149,6 @@ if __name__ == "__main__":
         fetch_boav_day(args.settlement_date, side)
     fetch_boalf_day(args.settlement_date)
     fetch_bmunits()
+    fetch_tec_register()
     if args.period:
         fetch_acceptances_period(args.settlement_date, args.period)

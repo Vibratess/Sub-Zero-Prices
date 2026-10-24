@@ -68,6 +68,7 @@ Charts must be readable in both light and dark, and legible when printed greysca
 | Thermal Constraint Costs (`thermal-constraint-costs`) | Cost by boundary — chart 2 |
 | 24 Months Ahead Constraint Limits | Future boundary capacity after reinforcement — chart 2 |
 | Day Ahead Constraint Flows and Limits | Boundary flows vs limits — chart 2 (check how much history it holds) |
+| Transmission Entry Capacity (TEC) register | Host transmission owner per project — used for the BM unit mapping. A current snapshot, not history |
 
 Note: NESO flagged column renames on several of these files from October 2026. Check headers when parsing.
 
@@ -122,7 +123,8 @@ Notebooks lie about execution order; the multi-year pull must never live in a re
 - **Replacement attribution is an estimate.** The data does not say which offer replaced which bid. Chart 3's method must be stated plainly and kept simple.
 - **Chart 2 is a ceiling.** Extra boundary capacity doesn't remove every constraint (local constraints, outages, other boundaries). Never present it as a forecast saving.
 - **`MID` zero rows mean "no index".** When traded volume misses Elexon's liquidity threshold, price and volume both default to zero. Treat zero-volume rows as missing, not as £0. `N2EXMIDP` is all zeros; use `APXMIDP`.
-- **BM unit mapping is where most of the hours will go.** Budget for it.
+- **BM unit mapping (Stage 03).** Region = host transmission owner (SHET/SPT = Scotland, NGET = England & Wales), from the GSP group for embedded units and from a reviewed TEC register match for transmission units. Name matching on *company* name picks the wrong wind farm (it put Whitelee in England) — match on the unit's own name first and review every row. Robin Rigg is marked unverified. The map covers units with fuel type `WIND` in today's register; units retired before the snapshot, or wind inside supplier units, are not in it — check coverage in Stage 04.
+- **"Scotland" is not one constraint.** On 7 April 2024, 88% of paid curtailment was in north Scotland (SHET), suggesting the binding boundary was inside Scotland, not only Scotland → England. Chart 2 must test which boundaries bind before crediting any one reinforcement.
 - **Reconciliation may fail.** If our total diverges from NESO's, that investigation *is* the interesting result. Do not fudge toward agreement.
 
 ---
@@ -133,7 +135,7 @@ Each stage produces something publishable on its own, so the project survives be
 
 - **01 — One day of prices, end to end.** ✅ Done. `MID` for 7 April 2024: fetch, cache, parse, plot.
 - **02 — One day of balancing cost, end to end.** ✅ Done. 7 April 2024: £2.82m paid to wind to cut 52,315 MWh; 160 of 160 cashflows in period 23 rebuilt by hand. Paid curtailment peaked in the evening, not when prices were most negative.
-- **03 — BM unit mapping.** Build `data/bmunit_map.csv`: fuel type, Scotland vs England & Wales, boundary. Document every judgement call.
+- **03 — BM unit mapping.** ✅ Done for wind. `data/bmunit_map.csv`: all 238 wind units placed (164 Scotland / 15.4 GW, 74 England & Wales / 16.5 GW); 111 site matches reviewed in `data/wind_site_matches.csv`. Boundary-level placement (beyond host TO) waits for Stage 05.
 - **04 — Three years, cached; charts 1 and 3.** Loop over the study period, cache everything, parse from disk. Monthly curtailment cost and full replacement cost. Reconcile against NESO constraint breakdown.
 - **05 — Boundaries; chart 2.** NESO boundary costs, limits and planned capacity. Compute the upper bound on what reinforcement could remove.
 

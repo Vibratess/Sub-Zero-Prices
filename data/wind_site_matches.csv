@@ -1,0 +1,112 @@
+site,unit_name,tec_project,host_to,score,matched_on,reviewed,evidence
+ABRBO,ABRBO-1,Aberdeen Offshore Wind Farm,SHET,1.0,lead party name,yes,TEC register: Aberdeen Offshore Wind Farm (Aberdeen Bay 132kV Substation)
+ACHRW,AChruach Wind Farm,A'Chruach Wind Farm,SHET,0.94,unit name,yes,TEC register: A'Chruach Wind Farm (A'Chruach Wind Farm 275kV Substation)
+AFTOW,Afton Wind Farm,Afton Wind Farm,SPT,1.0,unit name,yes,TEC register: Afton Wind Farm (Blackhill 132/33kV)
+AKGLW,AIKENGALL II,Aikengall II Windfarm,SPT,1.0,unit name,yes,TEC register: Aikengall II Windfarm (Wester Dod 132kV)
+ANSUW,An Suidhe 1,An Suidhe Wind Farm - Argyll (SRO),SHET,0.65,manual,yes,TEC register: An Suidhe Wind Farm - Argyll (SRO) (Eredine GSP); unit name An Suidhe
+ARCHW,Arecleoch,Arecleoch,SPT,1.0,unit name,yes,TEC register: Arecleoch (Arecleoch 132/33kV)
+BDCHW,Bad a Cheo Wind Farm,Bad a Cheo Wind Farm,SHET,1.0,unit name,yes,TEC register: Bad a Cheo Wind Farm (Mybster 3 33kV Substation)
+BEATO,Beatrice Offshore WF 1,Beatrice Wind Farm,SHET,1.0,unit name,yes,TEC register: Beatrice Wind Farm (Beatrice 400kV Substation)
+BEINW,Beinneun Wind farm,Beinneun Wind Farm,SHET,1.0,unit name,yes,TEC register: Beinneun Wind Farm (Beinneun 132kV Substation)
+BENBW,Benbrack WF,Benbrack Wind Farm,SPT,1.0,unit name,yes,TEC register: Benbrack Wind Farm (Benbrack Wind Farm 132/33kV Substation)
+BHLAW,Bhlaraidh Windfarm 1,Bhlaraidh Wind Farm,SHET,1.0,unit name,yes,TEC register: Bhlaraidh Wind Farm (Bhlaraidh 132/33kV Substation)
+BLKWW,Blackcraig Windfarm,Blackcraig Wind Farm,SPT,1.0,unit name,yes,TEC register: Blackcraig Wind Farm (Blackcraig 132/33kV)
+BLLA,T_BLLA-1,Blacklaw,SPT,0.62,manual,yes,TEC register: Blacklaw (Blacklaw 132/33kV); unit is Black Law (SP Renewables); proposal matched on company name
+BOWLW,Barrow Offshore Wind,Barrow Offshore Wind Farm,NGET,1.0,manual,yes,"TEC register: Barrow Offshore Wind Farm (HOST TO = OFTO); offshore wind farm in English/Welsh waters, so connects to the NGET system"
+BRBEO,BURBO_EXTENSION,Burbo Bank Extension Offshore Wind Farm,NGET,0.86,unit name,yes,TEC register: Burbo Bank Extension Offshore Wind Farm (BURBO BANK EXTENSION OFFSHORE Substation)
+BROCW,Broken Cross WF,Broken Cross Windfarm,SPT,1.0,unit name,yes,TEC register: Broken Cross Windfarm (Broken Cross 132/33kV)
+CGTHW,Corriegarth WF,Corriegarth,SHET,1.0,unit name,yes,TEC register: Corriegarth (Corriegarth 132/33kV substation)
+CLDCW,Clyde Central,Clyde North,SPT,1.0,lead party name,yes,TEC register: Clyde North (Clyde North 275/33kV)
+CLDNW,Clyde North,Clyde North,SPT,1.0,unit name,yes,TEC register: Clyde North (Clyde North 275/33kV)
+CLDSW,Clyde South,Clyde South,SPT,1.0,unit name,yes,TEC register: Clyde South (Clyde South 275/33kV)
+COUWW,Cour Wind Farm,Cour Wind Farm,SHET,1.0,unit name,yes,TEC register: Cour Wind Farm (Crossaig 132kV Substation)
+CRDEW,Crossdykes WF-1,Crossdykes,SPT,1.0,unit name,yes,TEC register: Crossdykes (Crossdykes 33kV)
+CREAW,Creag Riabhach Wind Farm,Creag Riabhach Wind Farm,SHET,1.0,unit name,yes,TEC register: Creag Riabhach Wind Farm (Creag Riabhach 132/33kV Substation)
+CRGHW,Carraig Gheal Wind Farm,Carraig Gheal Wind Farm,SHET,1.0,unit name,yes,TEC register: Carraig Gheal Wind Farm (Carraig Gheal 132/33kV Substation)
+CRMLW,Corriemoillie,Corriemoillie Wind Farm,SHET,1.0,unit name,yes,TEC register: Corriemoillie Wind Farm (Corriemoillie 132/33kV Substation)
+CRYRW,Crystal Rig II Windfarm,Crystal Rig II Wind Farm,SPT,1.0,unit name,yes,TEC register: Crystal Rig II Wind Farm (Crystal Rig 132/33kV)
+CUMHW,Cumberhead wind energy limited,Cumberhead,SPT,1.0,unit name,yes,TEC register: Cumberhead (Cumberhead 33kV)
+DALQW,Dalquhandy  Wind Farm,Dalquhandy Wind Farm,SPT,1.0,unit name,yes,TEC register: Dalquhandy Wind Farm (Cumberhead Collector 132/33kV)
+DBAWO,Dogger Bank A Offshore WF 1,Dogger Bank Project A,NGET,1.0,unit name,yes,TEC register: Dogger Bank Project A (Dogger Bank 220kV Offshores)
+DBBWO,Dogger Bank B Offshore WF 1,Dogger Bank Project 4 (Dogger Bank B),NGET,0.92,manual,yes,TEC register: Dogger Bank Project 4 (Dogger Bank B) (Dogger Bank 220kV Offshores); unit name Dogger Bank B
+DDGNO,Dudgeon Generator BMU 1,Dudgeon Offshore Wind Farm,NGET,1.0,lead party name,yes,TEC register: Dudgeon Offshore Wind Farm (Necton 400kV Substation)
+DNLWW,Dunlaw Extension,Dunlaw Extension,SPT,1.0,unit name,yes,TEC register: Dunlaw Extension (Dunlaw Extension 132/33kV)
+DOREW,Dorenell Wind Farm One,Dorenell Windfarm,SHET,0.8,unit name,yes,TEC register: Dorenell Windfarm (Dorenell 132/33kV Substation)
+DOUGW,T-DOUGW-1,Douglas West,SPT,0.6,manual,yes,TEC register: Douglas West (Coalburn 400/132kV); unit code DOUGW = Douglas West; proposal matched on company name
+DRSLW,Dersalloch Windfarm,Dersalloch Wind Farm,SPT,1.0,unit name,yes,TEC register: Dersalloch Wind Farm (Dersalloch 132/33kV)
+DUNGW,Dunmglass Windfarm 1,Dunmaglass Wind Farm,SHET,0.95,unit name,yes,TEC register: Dunmaglass Wind Farm (Dunmaglass 132kV Substation)
+DWEXW,Douglas West Extension,Douglas West Extension,SPT,1.0,unit name,yes,TEC register: Douglas West Extension (Douglas West Extension Windfarm)
+EAAO,East Anglia One Offshore 1,East Anglia One,NGET,1.0,unit name,yes,TEC register: East Anglia One (Platform EA One 220/66kV Offshore Substation)
+EDINW,Edinbane Windfarm,Edinbane Windfarm,SHET,1.0,unit name,yes,TEC register: Edinbane Windfarm (Edinbane 132/33kV Substation)
+ENHLW,Enoch Hill Wind Farm,Enoch Hill,SPT,1.0,unit name,yes,TEC register: Enoch Hill (Enoch Hill 132/33kV Substation)
+EWHLW,Ewe Hill II Windfarm,Ewe Hill,SPT,0.84,unit name,yes,TEC register: Ewe Hill (Ewehill 132/33kV)
+FAARW,Farr Unit 1,Farr WindFarm,SHET,1.0,unit name,yes,TEC register: Farr WindFarm (FARR WIND FARM 132/33KV SUBSTATION)
+FALGW,Fallago Rig Wind Farm,Fallago Rig Wind Farm,SPT,1.0,unit name,yes,TEC register: Fallago Rig Wind Farm (Fallago 400/33kV)
+FSDLW,Freasdail Wind Farm,Freasdail,SHET,1.0,unit name,yes,TEC register: Freasdail (Crossaig 132kV Substation)
+GAOFO,Galloper OSP 11,Galloper Wind Farm,NGET,0.8,unit name,yes,TEC register: Galloper Wind Farm (Galloper North 132/33kV Substation)
+GLNKW,GLEN KYLLACHY WINDFARM,Glen Kyllachy Wind Farm,SHET,1.0,unit name,yes,TEC register: Glen Kyllachy Wind Farm (Glen Kyllachy Wind Farm Substation)
+GLWSW,Galawhistle Wind Farm,Galawhistle Wind Farm,SPT,1.0,unit name,yes,TEC register: Galawhistle Wind Farm (Galawhistle 132/33kV Substation)
+GNAPW,Glen App Windfarm,Glen App Windfarm,SPT,1.0,unit name,yes,TEC register: Glen App Windfarm (Glen App 33kV)
+GNFSW,Gunfleet Sands 1,Gunfleet Sands Offshore Wind Farm,NGET,1.0,unit name,yes,TEC register: Gunfleet Sands Offshore Wind Farm (Gunfleet Sands 33/132kV Offshore)
+GORDW,Gordon Bush,Gordonbush Wind Farm,SHET,0.95,unit name,yes,TEC register: Gordonbush Wind Farm (Gordonbush GSP)
+GRGBW,Greater Gabbard Module 1,Greater Gabbard Offshore Wind Farm,NGET,0.81,manual,yes,"TEC register: Greater Gabbard Offshore Wind Farm (HOST TO = OFTO); offshore wind farm in English/Welsh waters, so connects to the NGET system"
+GRIFW,Griffin Wind Farm 1,Griffin Wind Farm,SHET,1.0,unit name,yes,TEC register: Griffin Wind Farm (Griffin 132/33kV Substation)
+GYMRO,GyM OSPE 15,Gwynt Y Mor Offshore Wind Farm,NGET,1.0,manual,yes,"TEC register: Gwynt Y Mor Offshore Wind Farm (HOST TO = OFTO); offshore wind farm in English/Welsh waters, so connects to the NGET system"
+HADHW,Hadyard Hill Wind Farm,Hadyard Hill,SPT,1.0,unit name,yes,TEC register: Hadyard Hill (Maybole 132/33kV)
+HAGHW,Hagshaw Repower 2,Hagshaw Repowering Phase 3,SPT,0.77,unit name,yes,TEC register: Hagshaw Repowering Phase 3 (Hagshaw Repowering Phase 3 132kV)
+HAHAW,Hagshaw Repower 1,Hagshaw Repowering Phase 3,SPT,0.77,unit name,yes,TEC register: Hagshaw Repowering Phase 3 (Hagshaw Repowering Phase 3 132kV)
+HALSW,Halsary Windfarm,Halsary Wind Farm,SHET,1.0,unit name,yes,TEC register: Halsary Wind Farm (Mybster 3 33kV Substation)
+HMGTO,Humber Offshore Wind Farm BMU1,Humber Gateway Offshore Wind Farm,NGET,1.0,manual,yes,"TEC register: Humber Gateway Offshore Wind Farm (HOST TO = OFTO); offshore wind farm in English/Welsh waters, so connects to the NGET system"
+HOWAO,HORNSEA_1A,Hornsea Power Station 1A,NGET,1.0,lead party name,yes,TEC register: Hornsea Power Station 1A (Hornsea Platform 1A Offshore Substation)
+HOWBO,HORNSEA_WF_2A,Hornsea Power Station 2A,NGET,1.0,lead party name,yes,TEC register: Hornsea Power Station 2A (Hornsea Platform 2A Offshore Substation)
+HRSTW,Harestanes,Harestanes,SPT,1.0,unit name,yes,TEC register: Harestanes (Harestanes West Wind Farm 132/33kV)
+INCWO,T_INCWO-1,Inch Cape Offshore Wind Farm Platform 1,SPT,1.0,lead party name,yes,TEC register: Inch Cape Offshore Wind Farm Platform 1 (Cockenzie 400/275kV)
+KENNW,Kennoxhead Wind Farm,Kennoxhead Wind Farm,SPT,1.0,unit name,yes,TEC register: Kennoxhead Wind Farm (Coalburn 132kV)
+KILBW,KILBW,Kilbraur Wind Farm,SHET,1.0,lead party name,yes,TEC register: Kilbraur Wind Farm (Kilbraur Wind Farm Substation)
+KLGLW,Kilgallioch Windfarm,Kilgallioch Wind Farm,SPT,1.0,unit name,yes,TEC register: Kilgallioch Wind Farm (Kilgallioch 275kV Substation)
+KPMRW,KYPE MUIR WIND FARM,Kype Muir,SPT,1.0,unit name,yes,TEC register: Kype Muir (Coalburn 400/132kV)
+KTHLW,KEITH HILL WINDFARM,Keith Hill Wind Farm,SPT,1.0,unit name,yes,TEC register: Keith Hill Wind Farm (Keith Hill 33kV)
+KYPEW,KYPE MUIR EXT WIND FARM,Kype Muir,SPT,0.82,unit name,yes,TEC register: Kype Muir (Coalburn 400/132kV)
+LARYO,London Array BMU1,London Array Offshore Wind Farm,NGET,0.83,manual,yes,"TEC register: London Array Offshore Wind Farm (HOST TO = OFTO); offshore wind farm in English/Welsh waters, so connects to the NGET system"
+LCLTW,Lochluichart Windfarm,Lochluichart,SHET,1.0,unit name,yes,TEC register: Lochluichart (Corriemoillie 132kV Substation)
+LIMKW,Limekiln Wind Farm,Limekiln,SHET,1.0,unit name,yes,TEC register: Limekiln (Limekilns 132/33kV substation)
+LNCSO,Lincs wind farm offshore BMU1,Lincs Offshore Wind Farm,NGET,1.0,manual,yes,"TEC register: Lincs Offshore Wind Farm (HOST TO = OFTO); offshore wind farm in English/Welsh waters, so connects to the NGET system"
+MIDMW,MIDDLE MUIR WIND FARM,Middle Muir Wind Farm,SPT,1.0,unit name,yes,TEC register: Middle Muir Wind Farm (Middlemuir 132/33kV)
+MILWW,MILWW,Millennium Wind,SHET,1.0,lead party name,yes,TEC register: Millennium Wind (Millennium GSP)
+MKHLW,Mark Hill,Mark Hill Wind Farm,SPT,1.0,unit name,yes,TEC register: Mark Hill Wind Farm (Mark Hill 275/132kV)
+MOWEO,Moray East OWF1,Moray East Offshore Wind Farm,SHET,0.8,unit name,yes,TEC register: Moray East Offshore Wind Farm (New Deer 400kV Substation)
+MOWWO,Moray West OWF1,Moray West Offshore Windfarm,SHET,0.8,unit name,yes,TEC register: Moray West Offshore Windfarm (Moray Firth 220/33kV Platform 1 & 2 Offshore Substation)
+MYGPW,Minnygap Wind Farm,Minnygap,SPT,1.0,unit name,yes,TEC register: Minnygap (Moffat 132/33kV)
+NNGAO,Neart Na Gaiothe WF 1,Neart Na Gaoithe Offshore Wind Farm,SPT,0.94,unit name,yes,TEC register: Neart Na Gaoithe Offshore Wind Farm (Neart Na Gaoithe 220/66KV Offshore Substation)
+NOKYW,North Kyle Wind Farm-1,North Kyle New Cumnock,SPT,0.8,manual,yes,TEC register: North Kyle New Cumnock (North Kyle 132/33kV substation); unit name North Kyle
+OMNDO,Ormonde Energy Limited 1,Ormonde Offshore Wind Farm,NGET,1.0,manual,yes,"TEC register: Ormonde Offshore Wind Farm (HOST TO = OFTO); offshore wind farm in English/Welsh waters, so connects to the NGET system"
+PGBIW,Pogbie WF,Pogbie Wind Farm,SPT,1.0,unit name,yes,TEC register: Pogbie Wind Farm (Pogbie 33kV)
+PLOEW,PENCLOE WIND 1,Pencloe Windfarm,SPT,1.0,unit name,yes,TEC register: Pencloe Windfarm (Pencloe 132/33kV Substation)
+PNYCW,PNYCW-1 Export,Pen Y Cymoedd Wind Farm,NGET,1.0,lead party name,yes,TEC register: Pen Y Cymoedd Wind Farm (Rhigos 400kV Substation)
+RCBKO,RACE_BANK_Z01,Race Bank Wind Farm,NGET,0.82,unit name,yes,TEC register: Race Bank Wind Farm (Race Bank 132kV Substation)
+RMPNO,Rampion Offshore Wind BMU 1,Rampion Offshore Wind Farm,NGET,1.0,unit name,yes,TEC register: Rampion Offshore Wind Farm (Rampion 33/132kV Offshore)
+RREW,T_RREW-1,Robin Rigg East Offshore Wind Farm,NGET,0.87,manual,unverified,"TEC register: Robin Rigg East Offshore Wind Farm (HOST TO = OFTO). Solway Firth; export cable understood to land at Seaton, Cumbria (England). Not yet verified against a primary source"
+RRWW,T_RRWW-1,Robin Rigg West Offshore Wind Farm,NGET,0.87,manual,unverified,"TEC register: Robin Rigg West Offshore Wind Farm (HOST TO = OFTO). Solway Firth; export cable understood to land at Seaton, Cumbria (England). Not yet verified against a primary source"
+SAKNW,Sandy Knowe Wind Farm,Sandy Knowe Wind Farm,SPT,1.0,unit name,yes,TEC register: Sandy Knowe Wind Farm (Sandyknowe 132/33kV)
+SANQW,SANQUHAR,Sanquhar Wind Farm,SPT,1.0,unit name,yes,TEC register: Sanquhar Wind Farm (Sanquhar 132/33kV)
+SGRWO,Seagreen1 Offshore WF 1,Seagreen 1 Offshore Wind Farm,SHET,0.94,unit name,yes,TEC register: Seagreen 1 Offshore Wind Farm (Tealing 275/33kV Substation)
+SHRSO,Sheringham Shoal Unit 1,Sheringham Shoal Offshore Wind Farm,NGET,1.0,manual,yes,"TEC register: Sheringham Shoal Offshore Wind Farm (HOST TO = OFTO); offshore wind farm in English/Welsh waters, so connects to the NGET system"
+SOFWO,Sofia Offshore Wind BMU 1,Sofia Offshore Wind Farm,NGET,1.0,unit name,yes,TEC register: Sofia Offshore Wind Farm (Lackenby 400kV Substation)
+SOKYW,South Kyle Wind Farm,South Kyle Wind Farm,SPT,1.0,unit name,yes,TEC register: South Kyle Wind Farm (New Cumnock 275/132kV)
+STLGW,Stronelairg Windfarm 1,Stronelairg,SHET,1.0,unit name,yes,TEC register: Stronelairg (Stronelairg 132/33kV Substation)
+STRNW,Strathy North Wind Farm 1,Strathy North Wind,SHET,1.0,unit name,yes,TEC register: Strathy North Wind (Strathy North 132/33kV Substation)
+TDBNW,Toddleburn,Toddleburn Wind Farm,SPT,1.0,unit name,yes,TEC register: Toddleburn Wind Farm (Toddleburn 33kV)
+THNTO,Thanet Offshore Wind Limited 1,Thanet Offshore Wind Farm,NGET,1.0,manual,yes,"TEC register: Thanet Offshore Wind Farm (HOST TO = OFTO); offshore wind farm in English/Welsh waters, so connects to the NGET system"
+TKNEW,Triton Knoll OSP East 1,Triton Knoll Offshore Wind Farm,NGET,1.0,lead party name,yes,TEC register: Triton Knoll Offshore Wind Farm (Triton Knoll Offshore Substation)
+TKNWW,Triton Knoll OSP west 1,Triton Knoll Offshore Wind Farm,NGET,1.0,lead party name,yes,TEC register: Triton Knoll Offshore Wind Farm (Triton Knoll Offshore Substation)
+TRLGW,T_TRLGW-1,Tralorg Wind Farm,SPT,0.58,manual,yes,TEC register: Tralorg Wind Farm (Tralorg 33kV); unit code TRLGW = Tralorg
+TWSHW,Twenty Shilling Wind Farm,Twentyshilling Wind Farm,SPT,0.97,unit name,yes,TEC register: Twentyshilling Wind Farm (Glenglass 132/33kV)
+VKNGW,Viking Energy Windfarm BMU-1,Viking Wind Farm,SHET,1.0,unit name,yes,TEC register: Viking Wind Farm (Kergord GSP)
+WDNSO,West of Duddon Sands Offshore1,West of Duddon Sands Offshore Wind Farm,NGET,0.8,manual,yes,"TEC register: West of Duddon Sands Offshore Wind Farm (HOST TO = OFTO); offshore wind farm in English/Welsh waters, so connects to the NGET system"
+WDRGW,Windy Rig Wind Farm,Windy Rig Wind Farm,SPT,1.0,unit name,yes,TEC register: Windy Rig Wind Farm (Blackhill 132/33kV)
+WHIHW,Whiteside Hill WF,Whiteside Hill Wind Farm,SPT,1.0,unit name,yes,TEC register: Whiteside Hill Wind Farm (Glenglass 132/33kV)
+WHILW,T_WHILW-1,Whitelee,SPT,0.62,manual,yes,TEC register: Whitelee (Whitelee 275/33kV); unit is Whitelee (SP Renewables); proposal matched on company name
+WISTW,Brockloch Rig 2 WF Exp A,Windy Standard II (Brockloch Rig) Wind Farm,SPT,1.0,lead party name,yes,TEC register: Windy Standard II (Brockloch Rig) Wind Farm (Dun Hill 132/33kV)
+WLNYO,WALNEY_2,Walney 3 Offshore Wind Farm,NGET,1.0,manual,yes,TEC register: Walney 3 Offshore Wind Farm (Walney 3 Offshore Substation); WALNEY_2 units belong to Walney Extension (Walney 3/4)
+WLNYW,WALNEY_1,Walney I Offshore Wind Farm,NGET,1.0,manual,yes,"TEC register: Walney I Offshore Wind Farm (Walney 1 33/132kV Offshore Substation); WALNEY_1 = Walney 1/2 (OFTO link); English waters, onshore connection on the NGET system"
+WTMSO,WESTERMOST_ROUGH,Westermost Rough Offshore Wind Farm,NGET,1.0,manual,yes,"TEC register: Westermost Rough Offshore Wind Farm (HOST TO = OFTO); offshore wind farm in English/Welsh waters, so connects to the NGET system"

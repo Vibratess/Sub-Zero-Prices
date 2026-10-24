@@ -1,0 +1,239 @@
+bm_unit,ng_bm_unit,site,name,fuel_type,generation_capacity_mw,host_to,method,region
+2__BLOND003,AG-BEDF03,AG,EDFE Aggregate E Mids 03,WIND,20.0,NGET,register GSP group: East Midlands,England & Wales
+2__NNATP001,NNPW01,NNPW01,2__NNATP001,WIND,50.0,NGET,register GSP group: SOUTH of SCOTLAND GSP,England & Wales
+2__PEDGE003,CMSTW-1,CMSTW,2__PEDGE003,WIND,55.749,SHET,register GSP group: North Scotland,Scotland
+2__PEDGE004,RSHLW-1,RSHLW,2__PEDGE004,WIND,27.376,SHET,register GSP group: North Scotland,Scotland
+2__PENEC001,ROTHW-1,ROTHW,Rothes Windfarm,WIND,54.501,SHET,register GSP group: North Scotland,Scotland
+2__PENEC002,PAUHW-1,PAUHW,Pauls Hill Windfarm,WIND,70.167,SHET,register GSP group: North Scotland,Scotland
+2__PSMAE001,CAUSW-1,CAUSW,2__PSMAE001,WIND,0.0,SHET,register GSP group: North Scotland,Scotland
+2__PSMAE003,TACHW-1,TACHW,CE Tacher Turbines Limited,WIND,12.9,SHET,register GSP group: North Scotland,Scotland
+2__PSMAR001,AG-PSMA01,AG,2__PSMAR001,WIND,50.0,NGET,register GSP group: NORTH of SCOTLAND GSP,England & Wales
+2__PSTAT001,CAIRW-2,CAIRW,STAT P2 North Scotland,WIND,42.0,SHET,register GSP group: North Scotland,Scotland
+2__PSTAT002,MDHLW-1,MDHLW,STAT P3 North Scotland,WIND,76.0,SHET,register GSP group: North Scotland,Scotland
+C__PSMAR001,ACHLW-1,ACHLW,C__PSMAR001-AAA-ACH-183,WIND,11.282,SHET,register GSP group: North Scotland,Scotland
+C__PSTAT011,TMNCW-1,TMNCW,C__PSTAT011-AAA-NAN-184,WIND,40.0,SHET,register GSP group: North Scotland,Scotland
+E_ABRTW-1,ABRTW-1,ABRTW,Auchrobert Wind Farm,WIND,36.0,SPT,register GSP group: South Scotland,Scotland
+E_AIRSW-1,AIRSW-1,AIRSW,Airies,WIND,38.0,SPT,register GSP group: South Scotland,Scotland
+E_ASHWW-1,ASHWW-1,ASHWW,Andershaw Wind Farm,WIND,35.0,SPT,register GSP group: South Scotland,Scotland
+E_ASLVW-1,ASLVW-1,ASLVW,Assel Valley Wind Farm,WIND,26.0,SPT,register GSP group: South Scotland,Scotland
+E_BABAW-1,BABAW-1,BABAW,Baillie Wind Farm,WIND,52.5,SHET,register GSP group: North Scotland,Scotland
+E_BETHW-1,BETHW-1,BETHW,BETHW-1,WIND,29.75,SHET,register GSP group: North Scotland,Scotland
+E_BLARW-1,BLARW-1,BLARW,E_BLARW-1,WIND,35.0,SHET,register GSP group: North Scotland,Scotland
+E_BNWKW-1,BNWKW-1,BNWKW,Burn of Whilk Windfarm,WIND,22.5,SHET,register GSP group: North Scotland,Scotland
+E_BRDUW-1,BRDUW-1,BRDUW,Braes of Doune,WIND,74.0,SHET,register GSP group: North Scotland,Scotland
+E_BRNLW-1,BRNLW-1,BRNLW,Brownieleys,WIND,7.5,SHET,register GSP group: North Scotland,Scotland
+E_BRYBW-1,BRYBW-1,BRYBW,Berry Burn Wind Farm,WIND,62.708,SHET,register GSP group: North Scotland,Scotland
+E_BTUIW-2,BTUIW-2,BTUIW,Beinn An Tuirc 2,WIND,43.7,SHET,register GSP group: North Scotland,Scotland
+E_BTUIW-3,BTUIW-3,BTUIW,Beinn an Tuirc III Windfarm,WIND,52.0,SHET,register GSP group: North Scotland,Scotland
+E_BURBO,BURBW-1,BURBW,Burbo Offshore Wind,WIND,90.0,NGET,register GSP group: Merseyside North Wales,England & Wales
+E_CLDRW-1,CLDRW-1,CLDRW,CLDRW-1,WIND,39.0,SHET,register GSP group: North Scotland,Scotland
+E_CLFLW-1,CLFLW-1,CLFLW,Clachan Flats,WIND,15.0,SHET,register GSP group: North Scotland,Scotland
+E_CMSTW-2,CMSTW-2,CMSTW,Camster II,WIND,36.0,SHET,register GSP group: North Scotland,Scotland
+E_CNCLW-1,CNCLW-1,CNCLW,Coire Na Cloiche WF,WIND,30.52,SHET,register GSP group: North Scotland,Scotland
+E_CRGTW-1,CRGTW-1,CRGTW,Craig 2 Wind Farm,WIND,4.7,SPT,register GSP group: South Scotland,Scotland
+E_DALSW-1,DALSW-1,DALSW,Dalswinton Windfarm,WIND,30.0,SPT,register GSP group: South Scotland,Scotland
+E_GDSTW-1,GDSTW-1,GDSTW,Gordonstown,WIND,13.289,SHET,register GSP group: North Scotland,Scotland
+E_GLCHW-1,GLCHW-1,GLCHW,Glenchamber,WIND,27.44,SPT,register GSP group: South Scotland,Scotland
+E_GLOFW-1,GLOFW-1,GLOFW,Glens of Foudland,WIND,26.7,SHET,register GSP group: North Scotland,Scotland
+E_GRGRW-1,GRGRW-1,GRGRW,Greengairs East WF-1,WIND,37.649,SPT,register GSP group: South Scotland,Scotland
+E_HBHDW-1,HBHDW-1,HBHDW,HARBURNHEADWF,WIND,51.7,SPT,register GSP group: South Scotland,Scotland
+E_HLGLW-1,HLGLW-1,HLGLW,Hill of Glaschyle,WIND,28.0,SHET,register GSP group: North Scotland,Scotland
+E_HLTWW-1,HLTWW-1,HLTWW,Hill of Towie,WIND,48.0,SHET,register GSP group: North Scotland,Scotland
+E_HRHLW-1,HRHLW-1,HRHLW,Hare Hill Extension Windfarm,WIND,30.0,SPT,register GSP group: South Scotland,Scotland
+E_HYWDW-1,HYWDW-1,HYWDW,Hywind Generator BMU1,WIND,30.0,SHET,register GSP group: North Scotland,Scotland
+E_KHLLW-1,KHLLW-1,KHLLW,Kirk Hill WF,WIND,18.8,SPT,register GSP group: South Scotland,Scotland
+E_KINCW-1,KINCW-1,KINCW,Kincardine Offshore Windfarm,WIND,49.6,SHET,register GSP group: North Scotland,Scotland
+E_MINSW-1,MINSW-1,MINSW,Minsca Wind Farm,WIND,38.123,SPT,register GSP group: South Scotland,Scotland
+E_MOYEW-1,MOYEW-1,MOYEW,Moy Windfarm,WIND,60.0,SHET,register GSP group: North Scotland,Scotland
+E_PIBUW-1,PIBUW-1,PIBUW,Pines Burn Wind Farm,WIND,36.0,SPT,register GSP group: South Scotland,Scotland
+E_STRHW-1,STRHW-1,STRHW,Strathrory Wind Farm,WIND,36.667,SHET,register GSP group: North Scotland,Scotland
+E_SWBKW-1,SWBKW-1,SWBKW,Solwaybank WF,WIND,34.0,SPT,register GSP group: South Scotland,Scotland
+E_TLYMW-1,TLYMW-1,TLYMW,Tullymurdoch Wind Farm,WIND,13.856,SHET,register GSP group: North Scotland,Scotland
+E_TULWW-1,TULWW-1,TULWW,Tullo Windfarm,WIND,17.0,SHET,register GSP group: North Scotland,Scotland
+E_TULWW-2,TULWW-2,TULWW,Tullo Extension,WIND,25.0,SHET,register GSP group: North Scotland,Scotland
+T_ABRBO-1,ABRBO-1,ABRBO,ABRBO-1,WIND,99.0,SHET,TEC register: Aberdeen Offshore Wind Farm (Aberdeen Bay 132kV Substation) [reviewed: yes],Scotland
+T_ACHRW-1,ACHRW-1,ACHRW,AChruach Wind Farm,WIND,42.6,SHET,TEC register: A'Chruach Wind Farm (A'Chruach Wind Farm 275kV Substation) [reviewed: yes],Scotland
+T_AFTOW-1,AFTOW-1,AFTOW,Afton Wind Farm,WIND,50.0,SPT,TEC register: Afton Wind Farm (Blackhill 132/33kV) [reviewed: yes],Scotland
+T_AKGLW-2,AKGLW-2,AKGLW,AIKENGALL II,WIND,63.84,SPT,TEC register: Aikengall II Windfarm (Wester Dod 132kV) [reviewed: yes],Scotland
+T_AKGLW-3,AKGLW-3,AKGLW,AIKENGALL2A-W,WIND,163.4,SPT,TEC register: Aikengall II Windfarm (Wester Dod 132kV) [reviewed: yes],Scotland
+T_ANSUW-1,ANSUW-1,ANSUW,An Suidhe 1,WIND,19.36,SHET,TEC register: An Suidhe Wind Farm - Argyll (SRO) (Eredine GSP); unit name An Suidhe [reviewed: yes],Scotland
+T_ARCHW-1,ARCHW-1,ARCHW,Arecleoch,WIND,114.0,SPT,TEC register: Arecleoch (Arecleoch 132/33kV) [reviewed: yes],Scotland
+T_BDCHW-1,BDCHW-1,BDCHW,Bad a Cheo Wind Farm,WIND,27.0,SHET,TEC register: Bad a Cheo Wind Farm (Mybster 3 33kV Substation) [reviewed: yes],Scotland
+T_BEATO-1,BEATO-1,BEATO,Beatrice Offshore WF 1,WIND,184.0,SHET,TEC register: Beatrice Wind Farm (Beatrice 400kV Substation) [reviewed: yes],Scotland
+T_BEATO-2,BEATO-2,BEATO,Beatrice Offshore WF 2,WIND,166.0,SHET,TEC register: Beatrice Wind Farm (Beatrice 400kV Substation) [reviewed: yes],Scotland
+T_BEATO-3,BEATO-3,BEATO,Beatrice Offshore WF 3,WIND,166.0,SHET,TEC register: Beatrice Wind Farm (Beatrice 400kV Substation) [reviewed: yes],Scotland
+T_BEATO-4,BEATO-4,BEATO,Beatrice Offshore WF 4,WIND,165.526,SHET,TEC register: Beatrice Wind Farm (Beatrice 400kV Substation) [reviewed: yes],Scotland
+T_BEINW-1,BEINW-1,BEINW,Beinneun Wind farm,WIND,108.8,SHET,TEC register: Beinneun Wind Farm (Beinneun 132kV Substation) [reviewed: yes],Scotland
+T_BENBW-1,BENBW-1,BENBW,Benbrack WF,WIND,67.0,SPT,TEC register: Benbrack Wind Farm (Benbrack Wind Farm 132/33kV Substation) [reviewed: yes],Scotland
+T_BHLAW-1,BHLAW-1,BHLAW,Bhlaraidh Windfarm 1,WIND,108.112,SHET,TEC register: Bhlaraidh Wind Farm (Bhlaraidh 132/33kV Substation) [reviewed: yes],Scotland
+T_BLKWW-1,BLKWW-1,BLKWW,Blackcraig Windfarm,WIND,56.216,SPT,TEC register: Blackcraig Wind Farm (Blackcraig 132/33kV) [reviewed: yes],Scotland
+T_BLLA-1,BLLA-1,BLLA,T_BLLA-1,WIND,118.0,SPT,TEC register: Blacklaw (Blacklaw 132/33kV); unit is Black Law (SP Renewables); proposal matched on company name [reviewed: yes],Scotland
+T_BLLA-2,BLLA-2,BLLA,Black Law Windfarm Extension,WIND,69.0,SPT,TEC register: Blacklaw (Blacklaw 132/33kV); unit is Black Law (SP Renewables); proposal matched on company name [reviewed: yes],Scotland
+T_BOWLW-1,BOWLW-1,BOWLW,Barrow Offshore Wind,WIND,90.0,NGET,"TEC register: Barrow Offshore Wind Farm (HOST TO = OFTO); offshore wind farm in English/Welsh waters, so connects to the NGET system [reviewed: yes]",England & Wales
+T_BRBEO-1,BRBEO-1,BRBEO,BURBO_EXTENSION,WIND,257.7,NGET,TEC register: Burbo Bank Extension Offshore Wind Farm (BURBO BANK EXTENSION OFFSHORE Substation) [reviewed: yes],England & Wales
+T_BROCW-1,BROCW-1,BROCW,Broken Cross WF,WIND,48.0,SPT,TEC register: Broken Cross Windfarm (Broken Cross 132/33kV) [reviewed: yes],Scotland
+T_CGTHW-1,CGTHW-1,CGTHW,Corriegarth WF,WIND,69.0,SHET,TEC register: Corriegarth (Corriegarth 132/33kV substation) [reviewed: yes],Scotland
+T_CLDCW-1,CLDCW-1,CLDCW,Clyde Central,WIND,200.0,SPT,TEC register: Clyde North (Clyde North 275/33kV) [reviewed: yes],Scotland
+T_CLDNW-1,CLDNW-1,CLDNW,Clyde North,WIND,200.0,SPT,TEC register: Clyde North (Clyde North 275/33kV) [reviewed: yes],Scotland
+T_CLDSW-1,CLDSW-1,CLDSW,Clyde South,WIND,150.0,SPT,TEC register: Clyde South (Clyde South 275/33kV) [reviewed: yes],Scotland
+T_COUWW-1,COUWW-1,COUWW,Cour Wind Farm,WIND,20.5,SHET,TEC register: Cour Wind Farm (Crossaig 132kV Substation) [reviewed: yes],Scotland
+T_CRDEW-1,CRDEW-1,CRDEW,Crossdykes WF-1,WIND,24.0,SPT,TEC register: Crossdykes (Crossdykes 33kV) [reviewed: yes],Scotland
+T_CRDEW-2,CRDEW-2,CRDEW,Crossdykes WF-2,WIND,24.0,SPT,TEC register: Crossdykes (Crossdykes 33kV) [reviewed: yes],Scotland
+T_CREAW-1,CREAW-1,CREAW,Creag Riabhach Wind Farm,WIND,93.0,SHET,TEC register: Creag Riabhach Wind Farm (Creag Riabhach 132/33kV Substation) [reviewed: yes],Scotland
+T_CRGHW-1,CRGHW-1,CRGHW,Carraig Gheal Wind Farm,WIND,46.0,SHET,TEC register: Carraig Gheal Wind Farm (Carraig Gheal 132/33kV Substation) [reviewed: yes],Scotland
+T_CRMLW-1,CRMLW-1,CRMLW,Corriemoillie,WIND,48.0,SHET,TEC register: Corriemoillie Wind Farm (Corriemoillie 132/33kV Substation) [reviewed: yes],Scotland
+T_CRYRW-2,CRYRW-2,CRYRW,Crystal Rig II Windfarm,WIND,150.62,SPT,TEC register: Crystal Rig II Wind Farm (Crystal Rig 132/33kV) [reviewed: yes],Scotland
+T_CRYRW-3,CRYRW-3,CRYRW,Crystal Rig III,WIND,13.8,SPT,TEC register: Crystal Rig II Wind Farm (Crystal Rig 132/33kV) [reviewed: yes],Scotland
+T_CRYRW-4,CRYRW-4,CRYRW,Crystal Rig IV Wind Farm,WIND,48.2,SPT,TEC register: Crystal Rig II Wind Farm (Crystal Rig 132/33kV) [reviewed: yes],Scotland
+T_CUMHW-1,CUMHW-1,CUMHW,Cumberhead wind energy limited,WIND,52.0,SPT,TEC register: Cumberhead (Cumberhead 33kV) [reviewed: yes],Scotland
+T_CUMHW-2,CUMHW-2,CUMHW,T_CUMHW-2,WIND,126.0,SPT,TEC register: Cumberhead (Cumberhead 33kV) [reviewed: yes],Scotland
+T_DALQW-1,DALQW-1,DALQW,Dalquhandy  Wind Farm,WIND,42.846,SPT,TEC register: Dalquhandy Wind Farm (Cumberhead Collector 132/33kV) [reviewed: yes],Scotland
+T_DBAWO-1,DBAWO-1,DBAWO,Dogger Bank A Offshore WF 1,WIND,302.4,NGET,TEC register: Dogger Bank Project A (Dogger Bank 220kV Offshores) [reviewed: yes],England & Wales
+T_DBAWO-2,DBAWO-2,DBAWO,Dogger Bank A Offshore WF 2,WIND,304.0,NGET,TEC register: Dogger Bank Project A (Dogger Bank 220kV Offshores) [reviewed: yes],England & Wales
+T_DBAWO-3,DBAWO-3,DBAWO,Dogger Bank A Offshore WF 3,WIND,302.8,NGET,TEC register: Dogger Bank Project A (Dogger Bank 220kV Offshores) [reviewed: yes],England & Wales
+T_DBAWO-4,DBAWO-4,DBAWO,Dogger Bank A Offshore WF 4,WIND,152.6,NGET,TEC register: Dogger Bank Project A (Dogger Bank 220kV Offshores) [reviewed: yes],England & Wales
+T_DBAWO-5,DBAWO-5,DBAWO,Dogger Bank A Offshore WF 5,WIND,138.2,NGET,TEC register: Dogger Bank Project A (Dogger Bank 220kV Offshores) [reviewed: yes],England & Wales
+T_DBBWO-1,DBBWO-1,DBBWO,Dogger Bank B Offshore WF 1,WIND,302.4,NGET,TEC register: Dogger Bank Project 4 (Dogger Bank B) (Dogger Bank 220kV Offshores); unit name Dogger Bank B [reviewed: yes],England & Wales
+T_DBBWO-2,DBBWO-2,DBBWO,Dogger Bank B Offshore WF 2,WIND,304.4,NGET,TEC register: Dogger Bank Project 4 (Dogger Bank B) (Dogger Bank 220kV Offshores); unit name Dogger Bank B [reviewed: yes],England & Wales
+T_DBBWO-3,DBBWO-3,DBBWO,Dogger Bank B Offshore WF 3,WIND,302.3,NGET,TEC register: Dogger Bank Project 4 (Dogger Bank B) (Dogger Bank 220kV Offshores); unit name Dogger Bank B [reviewed: yes],England & Wales
+T_DBBWO-4,DBBWO-4,DBBWO,Dogger Bank B Offshore WF 4,WIND,152.2,NGET,TEC register: Dogger Bank Project 4 (Dogger Bank B) (Dogger Bank 220kV Offshores); unit name Dogger Bank B [reviewed: yes],England & Wales
+T_DBBWO-5,DBBWO-5,DBBWO,Dogger Bank B Offshore WF 5,WIND,138.7,NGET,TEC register: Dogger Bank Project 4 (Dogger Bank B) (Dogger Bank 220kV Offshores); unit name Dogger Bank B [reviewed: yes],England & Wales
+T_DDGNO-1,DDGNO-1,DDGNO,Dudgeon Generator BMU 1,WIND,108.0,NGET,TEC register: Dudgeon Offshore Wind Farm (Necton 400kV Substation) [reviewed: yes],England & Wales
+T_DDGNO-2,DDGNO-2,DDGNO,Dudgeon Generator BMU 2,WIND,90.0,NGET,TEC register: Dudgeon Offshore Wind Farm (Necton 400kV Substation) [reviewed: yes],England & Wales
+T_DDGNO-3,DDGNO-3,DDGNO,Dudgeon Generator BMU 3,WIND,102.0,NGET,TEC register: Dudgeon Offshore Wind Farm (Necton 400kV Substation) [reviewed: yes],England & Wales
+T_DDGNO-4,DDGNO-4,DDGNO,Dudgeon Generator BMU 4,WIND,102.0,NGET,TEC register: Dudgeon Offshore Wind Farm (Necton 400kV Substation) [reviewed: yes],England & Wales
+T_DNLWW-1,DNLWW-1,DNLWW,Dunlaw Extension,WIND,29.75,SPT,TEC register: Dunlaw Extension (Dunlaw Extension 132/33kV) [reviewed: yes],Scotland
+T_DOREW-1,DOREW-1,DOREW,Dorenell Wind Farm One,WIND,114.0,SHET,TEC register: Dorenell Windfarm (Dorenell 132/33kV Substation) [reviewed: yes],Scotland
+T_DOREW-2,DOREW-2,DOREW,Dorenell Wind Farm Two,WIND,114.0,SHET,TEC register: Dorenell Windfarm (Dorenell 132/33kV Substation) [reviewed: yes],Scotland
+T_DOUGW-1,DOUGW-1,DOUGW,T-DOUGW-1,WIND,45.0,SPT,TEC register: Douglas West (Coalburn 400/132kV); unit code DOUGW = Douglas West; proposal matched on company name [reviewed: yes],Scotland
+T_DRSLW-1,DRSLW-1,DRSLW,Dersalloch Windfarm,WIND,70.9,SPT,TEC register: Dersalloch Wind Farm (Dersalloch 132/33kV) [reviewed: yes],Scotland
+T_DUNGW-1,DUNGW-1,DUNGW,Dunmglass Windfarm 1,WIND,100.0,SHET,TEC register: Dunmaglass Wind Farm (Dunmaglass 132kV Substation) [reviewed: yes],Scotland
+T_DWEXW-1,DWEXW-1,DWEXW,Douglas West Extension,WIND,65.51,SPT,TEC register: Douglas West Extension (Douglas West Extension Windfarm) [reviewed: yes],Scotland
+T_EAAO-1,EAAO-1,EAAO,East Anglia One Offshore 1,WIND,358.0,NGET,TEC register: East Anglia One (Platform EA One 220/66kV Offshore Substation) [reviewed: yes],England & Wales
+T_EAAO-2,EAAO-2,EAAO,East Anglia One Offshore 2,WIND,367.0,NGET,TEC register: East Anglia One (Platform EA One 220/66kV Offshore Substation) [reviewed: yes],England & Wales
+T_EDINW-1,EDINW-1,EDINW,Edinbane Windfarm,WIND,41.4,SHET,TEC register: Edinbane Windfarm (Edinbane 132/33kV Substation) [reviewed: yes],Scotland
+T_ENHLW-1,ENHLW-1,ENHLW,Enoch Hill Wind Farm,WIND,70.0,SPT,TEC register: Enoch Hill (Enoch Hill 132/33kV Substation) [reviewed: yes],Scotland
+T_EWHLW-1,EWHLW-1,EWHLW,Ewe Hill II Windfarm,WIND,38.0,SPT,TEC register: Ewe Hill (Ewehill 132/33kV) [reviewed: yes],Scotland
+T_FALGW-1,FALGW-1,FALGW,Fallago Rig Wind Farm,WIND,144.0,SPT,TEC register: Fallago Rig Wind Farm (Fallago 400/33kV) [reviewed: yes],Scotland
+T_FARR-1,FAARW-1,FAARW,Farr Unit 1,WIND,92.0,SHET,TEC register: Farr WindFarm (FARR WIND FARM 132/33KV SUBSTATION) [reviewed: yes],Scotland
+T_FARR-2,FAARW-2,FAARW,Farr Unit 2,WIND,92.0,SHET,TEC register: Farr WindFarm (FARR WIND FARM 132/33KV SUBSTATION) [reviewed: yes],Scotland
+T_FSDLW-1,FSDLW-1,FSDLW,Freasdail Wind Farm,WIND,22.2,SHET,TEC register: Freasdail (Crossaig 132kV Substation) [reviewed: yes],Scotland
+T_GANW-11,GAOFO-1,GAOFO,Galloper OSP 11,WIND,88.0,NGET,TEC register: Galloper Wind Farm (Galloper North 132/33kV Substation) [reviewed: yes],England & Wales
+T_GANW-13,GAOFO-3,GAOFO,Galloper OSP 13,WIND,88.0,NGET,TEC register: Galloper Wind Farm (Galloper North 132/33kV Substation) [reviewed: yes],England & Wales
+T_GANW-22,GAOFO-2,GAOFO,Galloper OSP 22,WIND,385.82,NGET,TEC register: Galloper Wind Farm (Galloper North 132/33kV Substation) [reviewed: yes],England & Wales
+T_GANW-24,GAOFO-4,GAOFO,Galloper OSP 24,WIND,88.0,NGET,TEC register: Galloper Wind Farm (Galloper North 132/33kV Substation) [reviewed: yes],England & Wales
+T_GLNKW-1,GLNKW-1,GLNKW,GLEN KYLLACHY WINDFARM,WIND,52.0,SHET,TEC register: Glen Kyllachy Wind Farm (Glen Kyllachy Wind Farm Substation) [reviewed: yes],Scotland
+T_GLWSW-1,GLWSW-1,GLWSW,Galawhistle Wind Farm,WIND,55.2,SPT,TEC register: Galawhistle Wind Farm (Galawhistle 132/33kV Substation) [reviewed: yes],Scotland
+T_GNAPW-1,GNAPW-1,GNAPW,Glen App Windfarm,WIND,22.0,SPT,TEC register: Glen App Windfarm (Glen App 33kV) [reviewed: yes],Scotland
+T_GNFSW-1,GNFSW-1,GNFSW,Gunfleet Sands 1,WIND,108.0,NGET,TEC register: Gunfleet Sands Offshore Wind Farm (Gunfleet Sands 33/132kV Offshore) [reviewed: yes],England & Wales
+T_GNFSW-2,GNFSW-2,GNFSW,Gunfleet Sands 2,WIND,64.48,NGET,TEC register: Gunfleet Sands Offshore Wind Farm (Gunfleet Sands 33/132kV Offshore) [reviewed: yes],England & Wales
+T_GORDW-1,GORDW-1,GORDW,Gordon Bush,WIND,86.764,SHET,TEC register: Gordonbush Wind Farm (Gordonbush GSP) [reviewed: yes],Scotland
+T_GORDW-2,GORDW-2,GORDW,Gordonbush WF Extension,WIND,58.733,SHET,TEC register: Gordonbush Wind Farm (Gordonbush GSP) [reviewed: yes],Scotland
+T_GRGBW-1,GRGBW-1,GRGBW,Greater Gabbard Module 1,WIND,205.0,NGET,"TEC register: Greater Gabbard Offshore Wind Farm (HOST TO = OFTO); offshore wind farm in English/Welsh waters, so connects to the NGET system [reviewed: yes]",England & Wales
+T_GRGBW-2,GRGBW-2,GRGBW,Greater Gabbard Module 2,WIND,167.0,NGET,"TEC register: Greater Gabbard Offshore Wind Farm (HOST TO = OFTO); offshore wind farm in English/Welsh waters, so connects to the NGET system [reviewed: yes]",England & Wales
+T_GRGBW-3,GRGBW-3,GRGBW,Greater Gabbard Module 3,WIND,167.0,NGET,"TEC register: Greater Gabbard Offshore Wind Farm (HOST TO = OFTO); offshore wind farm in English/Welsh waters, so connects to the NGET system [reviewed: yes]",England & Wales
+T_GRIFW-1,GRIFW-1,GRIFW,Griffin Wind Farm 1,WIND,102.0,SHET,TEC register: Griffin Wind Farm (Griffin 132/33kV Substation) [reviewed: yes],Scotland
+T_GRIFW-2,GRIFW-2,GRIFW,Griffin Wind Farm 2,WIND,104.0,SHET,TEC register: Griffin Wind Farm (Griffin 132/33kV Substation) [reviewed: yes],Scotland
+T_GYMR-15,GYMRO-15,GYMRO,GyM OSPE 15,WIND,148.0,NGET,"TEC register: Gwynt Y Mor Offshore Wind Farm (HOST TO = OFTO); offshore wind farm in English/Welsh waters, so connects to the NGET system [reviewed: yes]",England & Wales
+T_GYMR-17,GYMRO-17,GYMRO,GyM OSPE 17,WIND,148.0,NGET,"TEC register: Gwynt Y Mor Offshore Wind Farm (HOST TO = OFTO); offshore wind farm in English/Welsh waters, so connects to the NGET system [reviewed: yes]",England & Wales
+T_GYMR-26,GYMRO-26,GYMRO,GyM OSPW 26,WIND,148.0,NGET,"TEC register: Gwynt Y Mor Offshore Wind Farm (HOST TO = OFTO); offshore wind farm in English/Welsh waters, so connects to the NGET system [reviewed: yes]",England & Wales
+T_GYMR-28,GYMRO-28,GYMRO,GyM OSPW 28,WIND,148.0,NGET,"TEC register: Gwynt Y Mor Offshore Wind Farm (HOST TO = OFTO); offshore wind farm in English/Welsh waters, so connects to the NGET system [reviewed: yes]",England & Wales
+T_HADHW-1,HADHW-1,HADHW,Hadyard Hill Wind Farm,WIND,130.0,SPT,TEC register: Hadyard Hill (Maybole 132/33kV) [reviewed: yes],Scotland
+T_HAGHW-2,HAGHW-2,HAGHW,Hagshaw Repower 2,WIND,51.3,SPT,TEC register: Hagshaw Repowering Phase 3 (Hagshaw Repowering Phase 3 132kV) [reviewed: yes],Scotland
+T_HAHAW-1,HAHAW-1,HAHAW,Hagshaw Repower 1,WIND,30.258,SPT,TEC register: Hagshaw Repowering Phase 3 (Hagshaw Repowering Phase 3 132kV) [reviewed: yes],Scotland
+T_HALSW-1,HALSW-1,HALSW,Halsary Windfarm,WIND,30.0,SHET,TEC register: Halsary Wind Farm (Mybster 3 33kV Substation) [reviewed: yes],Scotland
+T_HMGTO-1,HMGTO-1,HMGTO,Humber Offshore Wind Farm BMU1,WIND,108.0,NGET,"TEC register: Humber Gateway Offshore Wind Farm (HOST TO = OFTO); offshore wind farm in English/Welsh waters, so connects to the NGET system [reviewed: yes]",England & Wales
+T_HMGTO-2,HMGTO-2,HMGTO,Humber Offshore Wind Farm BMU2,WIND,111.0,NGET,"TEC register: Humber Gateway Offshore Wind Farm (HOST TO = OFTO); offshore wind farm in English/Welsh waters, so connects to the NGET system [reviewed: yes]",England & Wales
+T_HOWAO-1,HOWAO-1,HOWAO,HORNSEA_1A,WIND,400.0,NGET,TEC register: Hornsea Power Station 1A (Hornsea Platform 1A Offshore Substation) [reviewed: yes],England & Wales
+T_HOWAO-2,HOWAO-2,HOWAO,HORNSEA_1B,WIND,400.0,NGET,TEC register: Hornsea Power Station 1A (Hornsea Platform 1A Offshore Substation) [reviewed: yes],England & Wales
+T_HOWAO-3,HOWAO-3,HOWAO,HORNSEA_1C,WIND,400.0,NGET,TEC register: Hornsea Power Station 1A (Hornsea Platform 1A Offshore Substation) [reviewed: yes],England & Wales
+T_HOWBO-1,HOWBO-1,HOWBO,HORNSEA_WF_2A,WIND,440.0,NGET,TEC register: Hornsea Power Station 2A (Hornsea Platform 2A Offshore Substation) [reviewed: yes],England & Wales
+T_HOWBO-2,HOWBO-2,HOWBO,HORNSEA_WF_2B,WIND,440.0,NGET,TEC register: Hornsea Power Station 2A (Hornsea Platform 2A Offshore Substation) [reviewed: yes],England & Wales
+T_HOWBO-3,HOWBO-3,HOWBO,HORNSEA_WF_2C,WIND,440.0,NGET,TEC register: Hornsea Power Station 2A (Hornsea Platform 2A Offshore Substation) [reviewed: yes],England & Wales
+T_HRSTW-1,HRSTW-1,HRSTW,Harestanes,WIND,142.3,SPT,TEC register: Harestanes (Harestanes West Wind Farm 132/33kV) [reviewed: yes],Scotland
+T_INCWO-1,INCWO-1,INCWO,T_INCWO-1,WIND,450.0,SPT,TEC register: Inch Cape Offshore Wind Farm Platform 1 (Cockenzie 400/275kV) [reviewed: yes],Scotland
+T_INCWO-2,INCWO-2,INCWO,T_INCWO-2,WIND,90.0,SPT,TEC register: Inch Cape Offshore Wind Farm Platform 1 (Cockenzie 400/275kV) [reviewed: yes],Scotland
+T_INCWO-3,INCWO-3,INCWO,T_INCWO-3,WIND,360.0,SPT,TEC register: Inch Cape Offshore Wind Farm Platform 1 (Cockenzie 400/275kV) [reviewed: yes],Scotland
+T_INCWO-4,INCWO-4,INCWO,T_INCWO-4,WIND,180.0,SPT,TEC register: Inch Cape Offshore Wind Farm Platform 1 (Cockenzie 400/275kV) [reviewed: yes],Scotland
+T_KENNW-1,KENNW-1,KENNW,Kennoxhead Wind Farm,WIND,60.0,SPT,TEC register: Kennoxhead Wind Farm (Coalburn 132kV) [reviewed: yes],Scotland
+T_KILBW-1,KILBW-1,KILBW,KILBW,WIND,68.51,SHET,TEC register: Kilbraur Wind Farm (Kilbraur Wind Farm Substation) [reviewed: yes],Scotland
+T_KLGLW-1,KLGLW-1,KLGLW,Kilgallioch Windfarm,WIND,228.0,SPT,TEC register: Kilgallioch Wind Farm (Kilgallioch 275kV Substation) [reviewed: yes],Scotland
+T_KLGLW-2,KLGLW-2,KLGLW,T_KLGLW-2,WIND,225.0,SPT,TEC register: Kilgallioch Wind Farm (Kilgallioch 275kV Substation) [reviewed: yes],Scotland
+T_KPMRW-1,KPMRW-1,KPMRW,KYPE MUIR WIND FARM,WIND,89.0,SPT,TEC register: Kype Muir (Coalburn 400/132kV) [reviewed: yes],Scotland
+T_KTHLW-1,KTHLW-1,KTHLW,KEITH HILL WINDFARM,WIND,4.54,SPT,TEC register: Keith Hill Wind Farm (Keith Hill 33kV) [reviewed: yes],Scotland
+T_KYPEW-1,KYPEW-1,KYPEW,KYPE MUIR EXT WIND FARM,WIND,67.0,SPT,TEC register: Kype Muir (Coalburn 400/132kV) [reviewed: yes],Scotland
+T_LARYW-1,LARYO-1,LARYO,London Array BMU1,WIND,171.0,NGET,"TEC register: London Array Offshore Wind Farm (HOST TO = OFTO); offshore wind farm in English/Welsh waters, so connects to the NGET system [reviewed: yes]",England & Wales
+T_LARYW-2,LARYO-2,LARYO,London Array BMU2,WIND,171.0,NGET,"TEC register: London Array Offshore Wind Farm (HOST TO = OFTO); offshore wind farm in English/Welsh waters, so connects to the NGET system [reviewed: yes]",England & Wales
+T_LARYW-3,LARYO-3,LARYO,London Array BMU3,WIND,171.0,NGET,"TEC register: London Array Offshore Wind Farm (HOST TO = OFTO); offshore wind farm in English/Welsh waters, so connects to the NGET system [reviewed: yes]",England & Wales
+T_LARYW-4,LARYO-4,LARYO,London Array BMU4,WIND,191.099,NGET,"TEC register: London Array Offshore Wind Farm (HOST TO = OFTO); offshore wind farm in English/Welsh waters, so connects to the NGET system [reviewed: yes]",England & Wales
+T_LCLTW-1,LCLTW-1,LCLTW,Lochluichart Windfarm,WIND,69.0,SHET,TEC register: Lochluichart (Corriemoillie 132kV Substation) [reviewed: yes],Scotland
+T_LIMKW-1,LIMKW-1,LIMKW,Limekiln Wind Farm,WIND,106.0,SHET,TEC register: Limekiln (Limekilns 132/33kV substation) [reviewed: yes],Scotland
+T_LNCSW-1,LNCSO-1,LNCSO,Lincs wind farm offshore BMU1,WIND,150.0,NGET,"TEC register: Lincs Offshore Wind Farm (HOST TO = OFTO); offshore wind farm in English/Welsh waters, so connects to the NGET system [reviewed: yes]",England & Wales
+T_LNCSW-2,LNCSO-2,LNCSO,Lincs wind farm offshore BMU2,WIND,150.0,NGET,"TEC register: Lincs Offshore Wind Farm (HOST TO = OFTO); offshore wind farm in English/Welsh waters, so connects to the NGET system [reviewed: yes]",England & Wales
+T_MIDMW-1,MIDMW-1,MIDMW,MIDDLE MUIR WIND FARM,WIND,51.0,SPT,TEC register: Middle Muir Wind Farm (Middlemuir 132/33kV) [reviewed: yes],Scotland
+T_MILWW-1,MILWW-1,MILWW,MILWW,WIND,65.0,SHET,TEC register: Millennium Wind (Millennium GSP) [reviewed: yes],Scotland
+T_MKHLW-1,MKHLW-1,MKHLW,Mark Hill,WIND,53.0,SPT,TEC register: Mark Hill Wind Farm (Mark Hill 275/132kV) [reviewed: yes],Scotland
+T_MOWEO-1,MOWEO-1,MOWEO,Moray East OWF1,WIND,300.0,SHET,TEC register: Moray East Offshore Wind Farm (New Deer 400kV Substation) [reviewed: yes],Scotland
+T_MOWEO-2,MOWEO-2,MOWEO,Moray East OWF2,WIND,300.0,SHET,TEC register: Moray East Offshore Wind Farm (New Deer 400kV Substation) [reviewed: yes],Scotland
+T_MOWEO-3,MOWEO-3,MOWEO,Moray East OWF3,WIND,300.0,SHET,TEC register: Moray East Offshore Wind Farm (New Deer 400kV Substation) [reviewed: yes],Scotland
+T_MOWWO-1,MOWWO-1,MOWWO,Moray West OWF1,WIND,215.0,SHET,TEC register: Moray West Offshore Windfarm (Moray Firth 220/33kV Platform 1 & 2 Offshore Substation) [reviewed: yes],Scotland
+T_MOWWO-2,MOWWO-2,MOWWO,Moray West OWF2,WIND,215.0,SHET,TEC register: Moray West Offshore Windfarm (Moray Firth 220/33kV Platform 1 & 2 Offshore Substation) [reviewed: yes],Scotland
+T_MOWWO-3,MOWWO-3,MOWWO,Moray West OWF3,WIND,143.0,SHET,TEC register: Moray West Offshore Windfarm (Moray Firth 220/33kV Platform 1 & 2 Offshore Substation) [reviewed: yes],Scotland
+T_MOWWO-4,MOWWO-4,MOWWO,Moray West OWF4,WIND,287.0,SHET,TEC register: Moray West Offshore Windfarm (Moray Firth 220/33kV Platform 1 & 2 Offshore Substation) [reviewed: yes],Scotland
+T_MYGPW-1,MYGPW-1,MYGPW,Minnygap Wind Farm,WIND,25.0,SPT,TEC register: Minnygap (Moffat 132/33kV) [reviewed: yes],Scotland
+T_NNGAO-1,NNGAO-1,NNGAO,Neart Na Gaiothe WF 1,WIND,224.0,SPT,TEC register: Neart Na Gaoithe Offshore Wind Farm (Neart Na Gaoithe 220/66KV Offshore Substation) [reviewed: yes],Scotland
+T_NNGAO-2,NNGAO-2,NNGAO,Neart Na Gaiothe WF 2,WIND,224.0,SPT,TEC register: Neart Na Gaoithe Offshore Wind Farm (Neart Na Gaoithe 220/66KV Offshore Substation) [reviewed: yes],Scotland
+T_NOKYW-1,NOKYW-1,NOKYW,North Kyle Wind Farm-1,WIND,106.0,SPT,TEC register: North Kyle New Cumnock (North Kyle 132/33kV substation); unit name North Kyle [reviewed: yes],Scotland
+T_NOKYW-2,NOKYW-2,NOKYW,North Kyle Wind Farm-2,WIND,106.0,SPT,TEC register: North Kyle New Cumnock (North Kyle 132/33kV substation); unit name North Kyle [reviewed: yes],Scotland
+T_OMNDW-1,OMNDO-1,OMNDO,Ormonde Energy Limited 1,WIND,150.76,NGET,"TEC register: Ormonde Offshore Wind Farm (HOST TO = OFTO); offshore wind farm in English/Welsh waters, so connects to the NGET system [reviewed: yes]",England & Wales
+T_PGBIW-1,PGBIW-1,PGBIW,Pogbie WF,WIND,10.0,SPT,TEC register: Pogbie Wind Farm (Pogbie 33kV) [reviewed: yes],Scotland
+T_PLOEW-1,PLOEW-1,PLOEW,PENCLOE WIND 1,WIND,81.0,SPT,TEC register: Pencloe Windfarm (Pencloe 132/33kV Substation) [reviewed: yes],Scotland
+T_PNYCW-1,PNYCW-1,PNYCW,PNYCW-1 Export,WIND,228.0,NGET,TEC register: Pen Y Cymoedd Wind Farm (Rhigos 400kV Substation) [reviewed: yes],England & Wales
+T_RCBKO-1,RCBKO-1,RCBKO,RACE_BANK_Z01,WIND,284.0,NGET,TEC register: Race Bank Wind Farm (Race Bank 132kV Substation) [reviewed: yes],England & Wales
+T_RCBKO-2,RCBKO-2,RCBKO,RACE_BANK_Z02,WIND,290.0,NGET,TEC register: Race Bank Wind Farm (Race Bank 132kV Substation) [reviewed: yes],England & Wales
+T_RMPNO-1,RMPNO-1,RMPNO,Rampion Offshore Wind BMU 1,WIND,200.1,NGET,TEC register: Rampion Offshore Wind Farm (Rampion 33/132kV Offshore) [reviewed: yes],England & Wales
+T_RMPNO-2,RMPNO-2,RMPNO,Rampion Offshore Wind BMU 2,WIND,200.1,NGET,TEC register: Rampion Offshore Wind Farm (Rampion 33/132kV Offshore) [reviewed: yes],England & Wales
+T_RREW-1,RREW-1,RREW,T_RREW-1,WIND,114.293,NGET,"TEC register: Robin Rigg East Offshore Wind Farm (HOST TO = OFTO). Solway Firth; export cable understood to land at Seaton, Cumbria (England). Not yet verified against a primary source [reviewed: unverified]",England & Wales
+T_RRWW-1,RRWW-1,RRWW,T_RRWW-1,WIND,90.838,NGET,"TEC register: Robin Rigg West Offshore Wind Farm (HOST TO = OFTO). Solway Firth; export cable understood to land at Seaton, Cumbria (England). Not yet verified against a primary source [reviewed: unverified]",England & Wales
+T_SAKNW-1,SAKNW-1,SAKNW,Sandy Knowe Wind Farm,WIND,87.0,SPT,TEC register: Sandy Knowe Wind Farm (Sandyknowe 132/33kV) [reviewed: yes],Scotland
+T_SANQW-1,SANQW-1,SANQW,SANQUHAR,WIND,32.08,SPT,TEC register: Sanquhar Wind Farm (Sanquhar 132/33kV) [reviewed: yes],Scotland
+T_SGRWO-1,SGRWO-1,SGRWO,Seagreen1 Offshore WF 1,WIND,358.0,SHET,TEC register: Seagreen 1 Offshore Wind Farm (Tealing 275/33kV Substation) [reviewed: yes],Scotland
+T_SGRWO-2,SGRWO-2,SGRWO,Seagreen1 Offshore WF 2,WIND,220.0,SHET,TEC register: Seagreen 1 Offshore Wind Farm (Tealing 275/33kV Substation) [reviewed: yes],Scotland
+T_SGRWO-3,SGRWO-3,SGRWO,Seagreen1 Offshore WF 3,WIND,374.618,SHET,TEC register: Seagreen 1 Offshore Wind Farm (Tealing 275/33kV Substation) [reviewed: yes],Scotland
+T_SGRWO-4,SGRWO-4,SGRWO,Seagreen1 Offshore WF 4,WIND,140.0,SHET,TEC register: Seagreen 1 Offshore Wind Farm (Tealing 275/33kV Substation) [reviewed: yes],Scotland
+T_SGRWO-5,SGRWO-5,SGRWO,Seagreen1 Offshore WF 5,WIND,300.0,SHET,TEC register: Seagreen 1 Offshore Wind Farm (Tealing 275/33kV Substation) [reviewed: yes],Scotland
+T_SGRWO-6,SGRWO-6,SGRWO,Seagreen1 Offshore WF 6,WIND,380.0,SHET,TEC register: Seagreen 1 Offshore Wind Farm (Tealing 275/33kV Substation) [reviewed: yes],Scotland
+T_SHRSW-1,SHRSO-1,SHRSO,Sheringham Shoal Unit 1,WIND,158.4,NGET,"TEC register: Sheringham Shoal Offshore Wind Farm (HOST TO = OFTO); offshore wind farm in English/Welsh waters, so connects to the NGET system [reviewed: yes]",England & Wales
+T_SHRSW-2,SHRSO-2,SHRSO,Sheringham Shoal Unit 2,WIND,158.4,NGET,"TEC register: Sheringham Shoal Offshore Wind Farm (HOST TO = OFTO); offshore wind farm in English/Welsh waters, so connects to the NGET system [reviewed: yes]",England & Wales
+T_SOFOW-11,SOFWO-11,SOFWO,Sofia Offshore Wind BMU 1,WIND,457.0,NGET,TEC register: Sofia Offshore Wind Farm (Lackenby 400kV Substation) [reviewed: yes],England & Wales
+T_SOFOW-12,SOFWO-12,SOFWO,Sofia Offshore Wind BMU 2,WIND,457.0,NGET,TEC register: Sofia Offshore Wind Farm (Lackenby 400kV Substation) [reviewed: yes],England & Wales
+T_SOFOW-21,SOFWO-21,SOFWO,Sofia Offshore Wind BMU 3,WIND,457.0,NGET,TEC register: Sofia Offshore Wind Farm (Lackenby 400kV Substation) [reviewed: yes],England & Wales
+T_SOFOW-22,SOFWO-22,SOFWO,Sofia Offshore Wind BMU 4,WIND,457.0,NGET,TEC register: Sofia Offshore Wind Farm (Lackenby 400kV Substation) [reviewed: yes],England & Wales
+T_SOKYW-1,SOKYW-1,SOKYW,South Kyle Wind Farm,WIND,426.916,SPT,TEC register: South Kyle Wind Farm (New Cumnock 275/132kV) [reviewed: yes],Scotland
+T_STLGW-1,STLGW-1,STLGW,Stronelairg Windfarm 1,WIND,108.0,SHET,TEC register: Stronelairg (Stronelairg 132/33kV Substation) [reviewed: yes],Scotland
+T_STLGW-2,STLGW-2,STLGW,Stronelairg Windfarm 2,WIND,108.0,SHET,TEC register: Stronelairg (Stronelairg 132/33kV Substation) [reviewed: yes],Scotland
+T_STLGW-3,STLGW-3,STLGW,Stronelairg Windfarm 3,WIND,108.0,SHET,TEC register: Stronelairg (Stronelairg 132/33kV Substation) [reviewed: yes],Scotland
+T_STRNW-1,STRNW-1,STRNW,Strathy North Wind Farm 1,WIND,70.0,SHET,TEC register: Strathy North Wind (Strathy North 132/33kV Substation) [reviewed: yes],Scotland
+T_TDBNW-1,TDBNW-1,TDBNW,Toddleburn,WIND,31.6,SPT,TEC register: Toddleburn Wind Farm (Toddleburn 33kV) [reviewed: yes],Scotland
+T_THNTO-1,THNTO-1,THNTO,Thanet Offshore Wind Limited 1,WIND,287.699,NGET,"TEC register: Thanet Offshore Wind Farm (HOST TO = OFTO); offshore wind farm in English/Welsh waters, so connects to the NGET system [reviewed: yes]",England & Wales
+T_THNTO-2,THNTO-2,THNTO,Thanet Offshore Wind Limited 2,WIND,230.159,NGET,"TEC register: Thanet Offshore Wind Farm (HOST TO = OFTO); offshore wind farm in English/Welsh waters, so connects to the NGET system [reviewed: yes]",England & Wales
+T_TKNEW-1,TKNEW-1,TKNEW,Triton Knoll OSP East 1,WIND,412.0,NGET,TEC register: Triton Knoll Offshore Wind Farm (Triton Knoll Offshore Substation) [reviewed: yes],England & Wales
+T_TKNWW-1,TKNWW-1,TKNWW,Triton Knoll OSP west 1,WIND,412.0,NGET,TEC register: Triton Knoll Offshore Wind Farm (Triton Knoll Offshore Substation) [reviewed: yes],England & Wales
+T_TRLGW-1,TRLGW-1,TRLGW,T_TRLGW-1,WIND,18.742,SPT,TEC register: Tralorg Wind Farm (Tralorg 33kV); unit code TRLGW = Tralorg [reviewed: yes],Scotland
+T_TWSHW-1,TWSHW-1,TWSHW,Twenty Shilling Wind Farm,WIND,37.8,SPT,TEC register: Twentyshilling Wind Farm (Glenglass 132/33kV) [reviewed: yes],Scotland
+T_VKNGW-1,VKNGW-1,VKNGW,Viking Energy Windfarm BMU-1,WIND,121.8,SHET,TEC register: Viking Wind Farm (Kergord GSP) [reviewed: yes],Scotland
+T_VKNGW-2,VKNGW-2,VKNGW,Viking Energy Windfarm BMU-2,WIND,121.8,SHET,TEC register: Viking Wind Farm (Kergord GSP) [reviewed: yes],Scotland
+T_VKNGW-3,VKNGW-3,VKNGW,Viking Energy Windfarm BMU-3,WIND,121.8,SHET,TEC register: Viking Wind Farm (Kergord GSP) [reviewed: yes],Scotland
+T_VKNGW-4,VKNGW-4,VKNGW,Viking Energy Windfarm BMU-4,WIND,121.8,SHET,TEC register: Viking Wind Farm (Kergord GSP) [reviewed: yes],Scotland
+T_WDNSO-1,WDNSO-1,WDNSO,West of Duddon Sands Offshore1,WIND,197.0,NGET,"TEC register: West of Duddon Sands Offshore Wind Farm (HOST TO = OFTO); offshore wind farm in English/Welsh waters, so connects to the NGET system [reviewed: yes]",England & Wales
+T_WDNSO-2,WDNSO-2,WDNSO,West of Duddon Sands Offshore2,WIND,201.0,NGET,"TEC register: West of Duddon Sands Offshore Wind Farm (HOST TO = OFTO); offshore wind farm in English/Welsh waters, so connects to the NGET system [reviewed: yes]",England & Wales
+T_WDRGW-1,WDRGW-1,WDRGW,Windy Rig Wind Farm,WIND,42.8,SPT,TEC register: Windy Rig Wind Farm (Blackhill 132/33kV) [reviewed: yes],Scotland
+T_WHIHW-1,WHIHW-1,WHIHW,Whiteside Hill WF,WIND,27.52,SPT,TEC register: Whiteside Hill Wind Farm (Glenglass 132/33kV) [reviewed: yes],Scotland
+T_WHILW-1,WHILW-1,WHILW,T_WHILW-1,WIND,309.0,SPT,TEC register: Whitelee (Whitelee 275/33kV); unit is Whitelee (SP Renewables); proposal matched on company name [reviewed: yes],Scotland
+T_WHILW-2,WHILW-2,WHILW,Whitelee Extension,WIND,206.0,SPT,TEC register: Whitelee (Whitelee 275/33kV); unit is Whitelee (SP Renewables); proposal matched on company name [reviewed: yes],Scotland
+T_WISTW-2,WISTW-2,WISTW,Brockloch Rig 2 WF Exp A,WIND,61.5,SPT,TEC register: Windy Standard II (Brockloch Rig) Wind Farm (Dun Hill 132/33kV) [reviewed: yes],Scotland
+T_WLNYO-2,WLNYO-2,WLNYO,WALNEY_2,WIND,183.6,NGET,TEC register: Walney 3 Offshore Wind Farm (Walney 3 Offshore Substation); WALNEY_2 units belong to Walney Extension (Walney 3/4) [reviewed: yes],England & Wales
+T_WLNYO-3,WLNYO-3,WLNYO,WALNEY_3,WIND,345.22,NGET,TEC register: Walney 3 Offshore Wind Farm (Walney 3 Offshore Substation); WALNEY_2 units belong to Walney Extension (Walney 3/4) [reviewed: yes],England & Wales
+T_WLNYO-4,WLNYO-4,WLNYO,WALNEY_4,WIND,330.0,NGET,TEC register: Walney 3 Offshore Wind Farm (Walney 3 Offshore Substation); WALNEY_2 units belong to Walney Extension (Walney 3/4) [reviewed: yes],England & Wales
+T_WLNYW-1,WLNYW-1,WLNYW,WALNEY_1,WIND,182.0,NGET,"TEC register: Walney I Offshore Wind Farm (Walney 1 33/132kV Offshore Substation); WALNEY_1 = Walney 1/2 (OFTO link); English waters, onshore connection on the NGET system [reviewed: yes]",England & Wales
+T_WTMSO-1,WTMSO-1,WTMSO,WESTERMOST_ROUGH,WIND,205.0,NGET,"TEC register: Westermost Rough Offshore Wind Farm (HOST TO = OFTO); offshore wind farm in English/Welsh waters, so connects to the NGET system [reviewed: yes]",England & Wales
