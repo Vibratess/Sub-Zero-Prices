@@ -1,0 +1,4 @@
+requests==2.34.2
+pandas==3.1.0
+plotnine==0.15.8
+ipykernel
