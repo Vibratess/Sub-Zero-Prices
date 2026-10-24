@@ -9,6 +9,8 @@ Writes to data/tidy/:
                       other units (the replacement generation)
   daily_by_fuel.csv   one row per day x side x fuel x flag: cash and volume for every unit,
                       to check how much cash the wind mapping covers
+  monthly_by_unit.csv one row per month x unit x side x flag: cash and volume, for "which
+                      wind farms" and "which replacement units" questions
 """
 
 import argparse
@@ -47,8 +49,8 @@ def acceptance_cash(settlement_date: str, side: str, flags: pd.DataFrame) -> pd.
     return df
 
 
-def build_day(settlement_date: str, units: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
-    """Half-hourly and by-fuel tables for one settlement day."""
+def build_day(settlement_date: str, units: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
+    """Half-hourly, by-fuel and by-unit tables for one settlement day."""
     flags = parse_boalf(boalf_cache_paths(settlement_date))
     acc = pd.concat([acceptance_cash(settlement_date, side, flags) for side in ["bid", "offer"]])
     acc = acc.merge(units, on="bm_unit", how="left")
@@ -57,6 +59,8 @@ def build_day(settlement_date: str, units: pd.DataFrame) -> tuple[pd.DataFrame, 
 
     # By fuel: everything, for the coverage check
     by_fuel = (acc.groupby(["settlement_date", "side", "fuel_type", "action"], as_index=False)
+                  [["cash_gbp", "volume_mwh"]].sum())
+    by_unit = (acc.groupby(["settlement_date", "bm_unit", "side", "action"], as_index=False)
                   [["cash_gbp", "volume_mwh"]].sum())
 
     # Paid curtailment: accepted wind bids, wide by side of the grid and flag
@@ -73,7 +77,7 @@ def build_day(settlement_date: str, units: pd.DataFrame) -> tuple[pd.DataFrame, 
     half = (mid[["settlement_date", "start_utc", "price_gbp_mwh"]].rename(columns={"price_gbp_mwh": "mid_price_gbp_mwh"})
             .join(curtail).join(repl))
     half["wind_bid_cash_mixed_flags_gbp"] = wind_bids[wind_bids["mixed_flags"]].groupby("settlement_period")["cash_gbp"].sum()
-    return half.reset_index(), by_fuel
+    return half.reset_index(), by_fuel, by_unit
 
 
 def wind_units() -> pd.DataFrame:
@@ -90,16 +94,17 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     units = wind_units()
-    halves, fuels, missing = [], [], []
+    halves, fuels, unit_days, missing = [], [], [], []
     for d in pd.date_range(args.start, args.end).strftime("%Y-%m-%d"):
         try:
-            half, by_fuel = build_day(d, units)
+            half, by_fuel, by_unit = build_day(d, units)
         except FileNotFoundError as error:
             missing.append(d)
             print(f"{d}: not fully cached ({Path(error.filename).name}), skipped")
             continue
         halves.append(half)
         fuels.append(by_fuel)
+        unit_days.append(by_unit)
 
     TIDY_DIR.mkdir(parents=True, exist_ok=True)
     halfhourly = pd.concat(halves, ignore_index=True)
@@ -108,4 +113,8 @@ if __name__ == "__main__":
     halfhourly[value_cols] = halfhourly[value_cols].fillna(0)
     halfhourly.to_csv(TIDY_DIR / "halfhourly.csv", index=False)
     pd.concat(fuels, ignore_index=True).to_csv(TIDY_DIR / "daily_by_fuel.csv", index=False)
+    by_unit = pd.concat(unit_days, ignore_index=True)
+    by_unit["month"] = by_unit["settlement_date"].str[:7]
+    (by_unit.groupby(["month", "bm_unit", "side", "action"], as_index=False)[["cash_gbp", "volume_mwh"]].sum()
+            .to_csv(TIDY_DIR / "monthly_by_unit.csv", index=False))
     print(f"Wrote {len(halfhourly):,} half-hours from {len(halves)} days; {len(missing)} days skipped: {missing}")
