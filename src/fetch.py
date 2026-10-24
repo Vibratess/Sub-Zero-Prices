@@ -8,6 +8,7 @@ No API key is needed. Files already in the cache are never re-requested.
 """
 
 import argparse
+import gzip
 from pathlib import Path
 
 import requests
@@ -25,9 +26,10 @@ def download_to_cache(endpoint: str, params: dict, path: Path) -> Path:
     response = requests.get(f"{BASE_URL}/{endpoint}", params=params, timeout=120)
     response.raise_for_status()
 
-    # Save the bytes exactly as received. All parsing happens later, from this file.
+    # Save the bytes exactly as received, gzip-compressed (JSON shrinks ~10x, and
+    # decompressing gives back the identical bytes). All parsing happens later, from this file.
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_bytes(response.content)
+    path.write_bytes(gzip.compress(response.content))
     print(f"Saved {len(response.content):,} bytes to {path.relative_to(RAW_DIR.parent.parent)}")
     return path
 
@@ -36,7 +38,7 @@ def download_to_cache(endpoint: str, params: dict, path: Path) -> Path:
 
 def mid_cache_path(settlement_date: str) -> Path:
     """Where the raw Market Index Data response for one settlement date is stored."""
-    return RAW_DIR / "MID" / f"MID_{settlement_date}.json"
+    return RAW_DIR / "MID" / f"MID_{settlement_date}.json.gz"
 
 
 def fetch_mid_day(settlement_date: str) -> Path:
@@ -56,7 +58,7 @@ def fetch_mid_day(settlement_date: str) -> Path:
 # --- Balancing Mechanism: what was paid, and for how much energy -------------------------
 
 def cashflow_cache_path(settlement_date: str, bid_offer: str) -> Path:
-    return RAW_DIR / "EBOCF" / f"EBOCF_{bid_offer}_{settlement_date}.json"
+    return RAW_DIR / "EBOCF" / f"EBOCF_{bid_offer}_{settlement_date}.json.gz"
 
 
 def fetch_cashflows_day(settlement_date: str, bid_offer: str) -> Path:
@@ -66,7 +68,7 @@ def fetch_cashflows_day(settlement_date: str, bid_offer: str) -> Path:
 
 
 def boav_cache_path(settlement_date: str, bid_offer: str) -> Path:
-    return RAW_DIR / "BOAV" / f"BOAV_{bid_offer}_{settlement_date}.json"
+    return RAW_DIR / "BOAV" / f"BOAV_{bid_offer}_{settlement_date}.json.gz"
 
 
 def fetch_boav_day(settlement_date: str, bid_offer: str) -> Path:
@@ -80,7 +82,7 @@ def fetch_boav_day(settlement_date: str, bid_offer: str) -> Path:
 
 
 def boalf_cache_path(settlement_date: str) -> Path:
-    return RAW_DIR / "BOALF" / f"BOALF_{settlement_date}.json"
+    return RAW_DIR / "BOALF" / f"BOALF_{settlement_date}.json.gz"
 
 
 def fetch_boalf_day(settlement_date: str) -> Path:
@@ -96,7 +98,7 @@ def fetch_boalf_day(settlement_date: str) -> Path:
 
 
 def acceptances_cache_path(settlement_date: str, settlement_period: int) -> Path:
-    return RAW_DIR / "ACCEPTANCES" / f"ACCEPTANCES_{settlement_date}_SP{settlement_period:02d}.json"
+    return RAW_DIR / "ACCEPTANCES" / f"ACCEPTANCES_{settlement_date}_SP{settlement_period:02d}.json.gz"
 
 
 def fetch_acceptances_period(settlement_date: str, settlement_period: int) -> Path:
@@ -112,7 +114,7 @@ def fetch_acceptances_period(settlement_date: str, settlement_period: int) -> Pa
 # --- Reference data ----------------------------------------------------------------------
 
 def bmunits_cache_path() -> Path:
-    return RAW_DIR / "reference" / "bmunits_all.json"
+    return RAW_DIR / "reference" / "bmunits_all.json.gz"
 
 
 def fetch_bmunits() -> Path:

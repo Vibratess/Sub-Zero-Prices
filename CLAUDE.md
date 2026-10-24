@@ -84,7 +84,7 @@ yearly files. Indicative (not final settlement) values are used; see Known traps
 
 - **Python.** Not R. The energy data community is Python and the repo is part of the deliverable.
 - `requests` + `pandas` + **`plotnine`** (ggplot2 grammar — preferred over raw matplotlib for the three charts).
-- **CSV cache on local disk.** No database, no parquet. Raw API responses are cached as received (JSON).
+- **CSV cache on local disk.** No database, no parquet. Raw API responses are cached as received (JSON, gzip-compressed).
 - No SQL. No Power BI.
 - `venv` for the environment (Python 3.14). Public git repo from the first commit.
 
@@ -117,7 +117,7 @@ Notebooks lie about execution order; the multi-year pull must never live in a re
 - **Cashflow sign convention (verified Stage 02).** Positive `EBOCF` = paid to the unit. A wind farm turned down (negative volume) at a negative bid price is paid; a gas plant turned down at a positive bid price pays back.
 - **`DISPTAV` is not settlement volume.** Its "Original" version misses volumes that were paid for. Use `BOAV`.
 - **`soFlag` is per acceptance, cash is per unit-period.** Cash is shared across a unit's acceptances pro rata to volume; exact unless flags are mixed (£22k of £2.82m on 7 April 2024). Report the pro-rated amount.
-- **Cache size and quota.** One day of `MID` + `EBOCF` + `BOAV` + `BOALF` is ~15 MB of JSON, so three years is ~16 GB, and `BOAV` is quota-limited. Decide the storage and pacing plan before the Stage 04 loop.
+- **Cache size and quota.** Raw responses are stored gzip-compressed (still byte-identical once decompressed): one day is ~0.7 MB, three years ~600 MB. `BOAV` is quota-limited, so the Stage 04 loop must be paced and resumable.
 - **The BM unit register lists a unit twice** (`T_WLNYO-4`). `parse_bmunits` drops exact copies and fails on conflicting ones.
 - **Replacement attribution is an estimate.** The data does not say which offer replaced which bid. Chart 3's method must be stated plainly and kept simple.
 - **Chart 2 is a ceiling.** Extra boundary capacity doesn't remove every constraint (local constraints, outages, other boundaries). Never present it as a forecast saving.

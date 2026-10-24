@@ -3,6 +3,7 @@
 Nothing here touches the network: every function reads from a file on disk.
 """
 
+import gzip
 import json
 from pathlib import Path
 
@@ -19,10 +20,15 @@ MID_PROVIDER = "APXMIDP"
 
 # --- Shared helpers ----------------------------------------------------------------------
 
+def load_raw(path: Path) -> dict | list:
+    """Read a cached response (gzip-compressed JSON) exactly as the API sent it."""
+    with gzip.open(path, "rt", encoding="utf-8") as f:
+        return json.load(f)
+
+
 def load_records(path: Path) -> pd.DataFrame:
-    """Read a cached JSON response. Most endpoints wrap their records in a "data" key."""
-    with open(path, encoding="utf-8") as f:
-        raw = json.load(f)
+    """Read a cached response as a table. Most endpoints wrap their records in a "data" key."""
+    raw = load_raw(path)
     return pd.DataFrame(raw["data"] if isinstance(raw, dict) else raw)
 
 
